@@ -1,7 +1,7 @@
 import React, { useState,useEffect } from 'react'
 import Image from 'next/image'
-import ProductMenuItem from './ProductMenuItem'
 import Modal from './Modal'
+
 export default function Burger(props) {
   const [flag,setFlag]=useState(false)
 
@@ -16,16 +16,16 @@ export default function Burger(props) {
 </div>
 <div>
     <Image src='/img/featured.jpeg' className='rounded-lg'  height={200} width={200}/>
-  <button className='absolute bottom-7 right-6 bg-white rounded-full' onClick={()=>{setFlag(true); console.log('aklsdf hkajsdh');}}>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-  <path stroke-linecap="round" stroke-linejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+  <button className='absolute bottom-7 right-6 bg-white rounded-full' onClick={()=>{setFlag(true);  document && document.getElementById('my_modal_5')?.showModal()}}>
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
+  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 </svg>
   </button>
   </div>
 </div>
 </div>
 <div>
-{ flag && <Modal flag={flag} />}
+{ flag && <Modal title={props.title} description={props.description} price={props.price}/>}
   
 </div>
     </>

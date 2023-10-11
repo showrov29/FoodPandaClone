@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import Image from 'next/image';
-import ProductMenuItem from './ProductMenuItem';
 import Burger from './Burger';
 const ProductSection = () => {
   const [activeSection, setActiveSection] = useState('chicken'); // Default to 'chicken'
