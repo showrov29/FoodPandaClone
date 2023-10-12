@@ -52,16 +52,16 @@ const ProductSection = () => {
         </div>
       </section>
       <hr />
- 
+     <div className="font-sans md:font-serif">
       <div
         className={`container mx-auto p-8 ${
           activeSection === 'chicken' ? '' : 'hidden'
         }`}
         id="chicken"
       >
-        <Burger title='Chicken burger' description='aldhf akgdsf ajgsdf kjagsd' price='399' />
-        <Burger title='Chicken burger' description='aldhf akgdsf ajgsdf kjagsd' price='399' />
-        <Burger title='Chicken burger' description='aldhf akgdsf ajgsdf kjagsd' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
       </div> 
 
       <div
@@ -70,9 +70,9 @@ const ProductSection = () => {
         }`}
         id="special"
       >
-        <Burger title='Special burger' description='Very very special' price='299'/> 
-        <Burger title='Special burger' description='Very very special' price='299'/> 
-        <Burger title='Special burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Special burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Special burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Special burger' description='Very very special' price='299'/> 
 
       </div> 
 
@@ -83,9 +83,9 @@ const ProductSection = () => {
         }`}
         id="combo"
       >
-        <Burger title='Combo burger' description='Very very special' price='299'/> 
-        <Burger title='Combo burger' description='Very very special' price='299'/> 
-        <Burger title='Combo burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Combo burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Combo burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Combo burger' description='Very very special' price='299'/> 
 
       </div> 
 
@@ -97,11 +97,12 @@ const ProductSection = () => {
         }`}
         id="beef"
       >
-        <Burger title='Beef burger' description='Very very special' price='299'/> 
-        <Burger title='Combo burger' description='Very very special' price='299'/> 
-        <Burger title='Combo burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Beef burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Combo burger' description='Very very special' price='299'/> 
+        <Burger src="/img/featured.jpeg" title='Combo burger' description='Very very special' price='299'/> 
       </div>
       {/* Add more product sections for other types if needed */}
+    </div>
     </div>
   );
 };
