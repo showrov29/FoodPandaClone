@@ -17,8 +17,8 @@ export default function Cartview(props) {
     <div className="card mt-4 bg-white-800 shadow-md">
     <div className="card-body">
       <div className="grid grid-cols-2">
-    <h2 className="card-title">Delivary time</h2>
-    <p>ASAP (35 mins)</p>
+    <h2 className="card-title">Cooking time</h2>
+    <p>ASAP (40 mins)</p>
     <button className="text-pink-400 text-start">Change</button>
     </div>
   </div>

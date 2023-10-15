@@ -1,9 +1,7 @@
-// import Cartview from "@/pages/Components/Cartview";
 import Featured from "@/pages/Components/Featured";
-// import ProductMenuItem from "@/pages/Components/ProductMenuItem";
-// import '@/styles/globals.css'
 
 import ProductSection from "@/pages/Components/ProductSection";
+import Test from "./Components/Test";
 export default function Home() {
   
   return (
@@ -11,7 +9,7 @@ export default function Home() {
     {/* <Cartview/> */}
     <Featured/>
     <ProductSection/>
-
+     <Test/>
     </>
    
   )

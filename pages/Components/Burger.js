@@ -8,7 +8,7 @@ export default function Burger(props) {
 
   return (
     <> 
-    <div className="p-2">
+<div className="p-2">
 <div className='bg-white rounded-lg border-2 flex flex-row justify-between h-32 w-72 items-center px-4  hover:scale-105 transition-all duration-100 hover:bg-pink-100 relative ' >
 <div className='flex flex-col'>
     <h3 className='text-xs font-bold overflow-hidden '>{props.title}</h3>
