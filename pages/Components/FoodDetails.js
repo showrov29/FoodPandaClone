@@ -1,15 +1,14 @@
 import React, { useState,useEffect } from 'react'
 import Image from 'next/image'
 import Modal from './Modal'
-import Cartview from './Cartview'
-
-export default function Burger(props) {
+export default function FoodDetails (props) {
   const [flag,setFlag]=useState(false)
 
   return (
     <> 
 <div className="p-2">
-<div className='bg-white rounded-lg border-2 flex flex-row justify-between h-32 w-72 items-center px-4  hover:scale-105 transition-all duration-100 hover:bg-pink-100 relative ' >
+<h1 className='p-2 text-bold text-xl'>{props.category}</h1>
+<div className='rounded-lg border-2 flex flex-row justify-between h-32 w-auto items-center px-4  hover:scale-105 transition-all duration-100  hover:bg-pink-100 relative z-10' >
 <div className='flex flex-col'>
     <h3 className='text-xs font-bold overflow-hidden '>{props.title}</h3>
     <p className='truncate text-xs max-w-xs pr-2'>{props.description}</p>
@@ -26,8 +25,9 @@ export default function Burger(props) {
 </div>
 </div>
 <div>
-{ flag && <Modal ser={props.src} title={props.title} description={props.description} price={props.price}/>}
+{ flag && <Modal src={props.src} title={props.title} description={props.description} price={props.price}/>}
 </div>
     </>
   )
 }
+

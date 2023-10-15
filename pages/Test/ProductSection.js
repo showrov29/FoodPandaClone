@@ -62,6 +62,12 @@ const ProductSection = () => {
         <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
         <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
         <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
+        <Burger src="/img/featured.jpeg" title='Chicken burger' description='Very very special' price='399' />
       </div> 
 
       <div

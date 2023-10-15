@@ -1,15 +1,14 @@
 import Featured from "@/pages/Components/Featured";
 
-import ProductSection from "@/pages/Components/ProductSection";
-import Test from "./Components/Test";
+import Food from "./Components/Food";
+
 export default function Home() {
   
   return (
     <>
-    {/* <Cartview/> */}
     <Featured/>
-    <ProductSection/>
-     <Test/>
+    <Food/>
+     
     </>
    
   )
