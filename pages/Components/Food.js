@@ -10,13 +10,13 @@ const Food = () => {
     <div id="foodDetails0">
     <FoodDetails
           category="Chicken Burgers"
-          src="/img/featured.jpeg"
+          src="/img/f1.jpeg"
           title="Chicken"
           description="Tasty dishes from Category 1."
           price={12.99}
         />
         <FoodDetails
-          src="/img/featured.jpeg"
+          src="/img/f1.jpeg"
           title="Chicken"
           description="Tasty dishes from Category 2."
           price={12.99}
