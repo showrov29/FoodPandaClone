@@ -1,3 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+#cb1 {
+    accent-color: #EC53B0;
+  }
