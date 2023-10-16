@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     extend: {
       fontFamily:{
-        sans: ['var(--font-inter)']
+        sans: ['Arial', 'ui-sans-serif']
       }
       
     },

@@ -14,7 +14,7 @@ useEffect(() => {
     }
    },[])
    
-   const [quantity, setQuantity] = useState(0);
+   const [quantity, setQuantity] = useState(1);
 
    const addToCart = () => {
      
@@ -31,7 +31,7 @@ useEffect(() => {
   <>
 
 <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
-<div className='modal-box w-full h-1/3'>
+<div className='modal-box w-full h-1/2'>
 <h2 className="font-bold font-mono text-pink-400 text-center">Select Quantity</h2>
       <button
         className="product-tile__button-overlay absolute-fill-parent"

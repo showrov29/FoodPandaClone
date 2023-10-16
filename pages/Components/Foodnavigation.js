@@ -10,8 +10,8 @@ const FoodTabs = () => {
     { title: 'Beef'},
     { title: 'Combo' },
     { title: 'Special'},
-    { title: 'Category ' },
-    { title: 'Category ' },
+    { title: 'New' },
+    { title: 'Hot ' },
   ];
 
   const handleTabClick = (index) => {
@@ -39,7 +39,7 @@ const FoodTabs = () => {
   }, []);
 
   return (
-    <div className={`w-full z-20 bg-slate-100 ${isSticky ? 'sticky top-0' : 'relative'}`}>
+    <div className={`w-full z-20  ${isSticky ? 'sticky top-0 shadow-lg bg-slate-50' : 'relative'}`}>
       <div className="flex space-x-4 overflow-x-scroll py-4" ref={tabsContainerRef}>
         {tabData.map((tab, index) => (
           <button

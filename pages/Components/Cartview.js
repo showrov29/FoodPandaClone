@@ -1,7 +1,6 @@
 import React from 'react'
 import Image from 'next/image'
 import { Link } from 'react-scroll'
-import Addressreview from './Addressreview'
 export default function Cartview(props) {
   console.log(props)
   return (

@@ -31,8 +31,10 @@ export default function Featured() {
       </div>
        
       <div className="flex">
-        <div className="mt-4">
-          <Image src="/img/clock.jpeg" alt="image" width="30" height="30" />
+        <div className="mt-4 text-pink-500">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+        </svg>
         </div>
         <div className="flex items-center text-black text-opacity-100 mt-4 ml-4 text-sm font-sans md:font-serif">
           Cooking time: min 40 mins.

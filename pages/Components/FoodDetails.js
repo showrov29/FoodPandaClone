@@ -8,15 +8,15 @@ export default function FoodDetails (props) {
     <> 
 <div className="p-2">
 <h1 className='p-2 text-bold text-xl'>{props.category}</h1>
-<div className='rounded-lg border-2 flex flex-row justify-between h-32 w-auto items-center px-4  hover:scale-105 transition-all duration-100  hover:bg-pink-100 relative z-10' >
+<div className='rounded-lg border-2 flex flex-row justify-between h-20 w-auto items-center px-4  hover:scale-105 transition-all duration-100  hover:bg-pink-100 relative z-10' >
 <div className='flex flex-col'>
-    <h3 className='text-xs font-bold overflow-hidden '>{props.title}</h3>
-    <p className='truncate text-xs max-w-xs pr-2'>{props.description}</p>
-    <h4 className='text-xs font-semibold'>{props.price} tk</h4>
+    <h3 className='text-sm font-bold overflow-hidden '>{props.title}</h3>
+    <p className='truncate text-sm text-opacity-50 max-w-xs pr-2'>{props.description}</p>
+    <h4 className='text-xs font-semibold pt-2'>{props.price} tk</h4>
 </div>
 <div>
-    <Image src={props.src} className='rounded-lg'  height={200} width={200}/>
-  <button className='absolute bottom-7 right-6 bg-white rounded-full' onClick={()=>{setFlag(true);  document && document.getElementById('my_modal_5')?.showModal()}}>
+    <Image src={props.src} className='rounded-lg'  height={100} width={100}/>
+  <button className='absolute bottom-1 right-3 bg-pink-500 text-white rounded-full' onClick={()=>{setFlag(true);  document && document.getElementById('my_modal_5')?.showModal()}}>
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
 </svg>
