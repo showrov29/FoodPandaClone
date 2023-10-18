@@ -1,11 +1,12 @@
 import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
 import Recomanded from './Recomanded';
+import Cartview from './Cartview';
 export default function Modal(props) {
 const [flag,setFlag]=useState(false)
 useEffect(() => {
     setFlag(props.flag)
-    // console.log(props);
+
     if (flag){
        document.getElementById('my_modal_5').showModal()
     }
@@ -19,7 +20,19 @@ useEffect(() => {
    const addToCart = () => {
      
    };
-  
+   
+    const [selectedPrices, setSelectedPrices] = useState([]);
+    const selectedPriceTotal = selectedPrices.reduce((total, price) => total + price, 0);
+
+    const addSelectedPrice = (price) => {
+    setSelectedPrices((prevSelectedPrices) => [...prevSelectedPrices, price]);
+  };
+
+  const removeSelectedPrice = (price) => {
+    setSelectedPrices((prevSelectedPrices) =>
+      prevSelectedPrices.filter((selectedPrice) => selectedPrice !== price)
+    );
+  };
   return (
   <>
     {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
@@ -43,13 +56,17 @@ useEffect(() => {
         </div>
         <div className="box-flex product-tile__price-row ai-center fw-wrap fd-row">
           <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold">Tk {' '}
-             {props.price * quantity}
+          {props.price * quantity + selectedPriceTotal}
           </p>
         </div>
         </div>
       </div>
       <div className='h-64 overflow-y-scroll'>
-        <Recomanded/>
+        <Recomanded 
+        selectedPrices={selectedPrices}
+        addSelectedPrice={addSelectedPrice}
+        removeSelectedPrice={removeSelectedPrice}/>
+        
         </div>
       
       <div className='  mt-2 shadow-top-lg'>

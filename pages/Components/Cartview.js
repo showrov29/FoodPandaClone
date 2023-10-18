@@ -5,13 +5,14 @@ export default function Cartview(props) {
   console.log(props)
   return (
     <>
+    {/* <h1 className='text-2xl pl-12'>Cart</h1> */}
     <div className="bg-white-800">
     <div>
-        <ul className="steps w-full h-full bg-pink-500">
-        <li className="step step-success">Menu</li>
-        <li className="step step-success">Cart</li>
-        <li className="step">Cheakout</li>
-</ul>
+        <ul className="steps w-full h-full bg-white-500">
+        <li className="step step-secondary">Menu</li>
+        <li className="step step-secondary">Cart</li>
+        <li className="step ">Cheakout</li>
+        </ul>
 </div>
     <div className="bg-slate-50 w-11/12	h-1/6	ml-4">
     <div className="w-full h-1/2 ">
@@ -40,10 +41,10 @@ export default function Cartview(props) {
         </div>
       </div>
       <div className='px-6 relative top-48 text-sm font-thin'>
-        <div className='grid grid-cols-2'>
+        {/* <div className='grid grid-cols-2'>
           <p>Delivary fee</p>
           <p className='flex justify-end'>Tk 40</p>
-        </div>
+        </div> */}
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
         <h1 className='flex justify-end'>Tk {props.price}</h1>

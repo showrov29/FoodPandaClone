@@ -13,13 +13,13 @@ const Food = () => {
           src="/img/f1.jpeg"
           title="Chicken"
           description="Tasty dishes from Category 1."
-          price={12.99}
+          price={299}
         />
         <FoodDetails
           src="/img/f1.jpeg"
           title="Chicken"
           description="Tasty dishes from Category 2."
-          price={12.99}
+          price={299}
         />
     </div>
         <div id="foodDetails1">
@@ -28,14 +28,14 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="Beef"
           description="Tasty dishes from Category 3."
-          price={12.99}
+          price={299}
           
         />
         <FoodDetails
           src="/img/featured.jpeg"
           title="Beef"
           description="Tasty dishes from Category 4."
-          price={12.99}
+          price={299}
           
         />
         </div>
@@ -45,7 +45,7 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="Combo"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         <FoodDetails
@@ -53,7 +53,7 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="Combo"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
         />
         </div>
         <div id="foodDetails3">
@@ -62,14 +62,14 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="Special"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         <FoodDetails
           src="/img/featured.jpeg"
           title="Special"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         </div>
@@ -79,14 +79,14 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="New arrival"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         <FoodDetails
           src="/img/featured.jpeg"
           title="New arrival"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         </div>
@@ -96,14 +96,14 @@ const Food = () => {
           src="/img/featured.jpeg"
           title="Hot deals"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         <FoodDetails
           src="/img/featured.jpeg"
           title="Hot deals"
           description="Tasty dishes from Category 5."
-          price={12.99}
+          price={299}
           
         />
         </div>
