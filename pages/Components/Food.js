@@ -1,5 +1,4 @@
 import React from 'react';
-//import Foodnavigation from "../components/Foodnavigation";
 import Foodnavigation from '../Components/Foodnavigation';
 import FoodDetails from '../Components/FoodDetails';
 
