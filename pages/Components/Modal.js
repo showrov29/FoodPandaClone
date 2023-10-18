@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import Link from 'next/link';
 import Recomanded from './Recomanded';
-import Cartview from './Cartview';
 export default function Modal(props) {
 const [flag,setFlag]=useState(false)
 useEffect(() => {
@@ -33,6 +32,7 @@ useEffect(() => {
       prevSelectedPrices.filter((selectedPrice) => selectedPrice !== price)
     );
   };
+  const total= props.price * quantity + selectedPriceTotal;
   return (
   <>
     {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
@@ -56,7 +56,8 @@ useEffect(() => {
         </div>
         <div className="box-flex product-tile__price-row ai-center fw-wrap fd-row">
           <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold">Tk {' '}
-          {props.price * quantity + selectedPriceTotal}
+          {/* {props.price * quantity + selectedPriceTotal} */}
+          {total}
           </p>
         </div>
         </div>
@@ -96,7 +97,9 @@ useEffect(() => {
         </div>
         <div className="flex justify-center">
       <button className="rounded-lg w-56 btn-secondary hover:scale-105 transition-all font-sans md:font-serif absolute bottom-0 right-4 p-2">
-       <Link  href="./cart" >Add to cart</Link>
+      <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>
+    Add to cart</Link>
+
        </button>
       </div>
       </div>
