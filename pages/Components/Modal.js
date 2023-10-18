@@ -70,8 +70,8 @@ useEffect(() => {
         
         </div>
       
-      <div className='  mt-2 shadow-top-lg'>
-       <div className="box-flex product-tile__quick-add-to-cart flex flex-col-4 pb-2">
+      <div className='mt-2 shadow-top-sm'>
+       <div className="flex flex-col-4">
         <button
           className={`font-bold hover:text-xl pl-8 mt-6 ${
             quantity > 0 ? 'text-pink-500' : 'text-black'
@@ -95,13 +95,13 @@ useEffect(() => {
           </button>
         
         </div>
-        <div className="flex justify-center">
-      <button className="rounded-lg w-56 btn-secondary hover:scale-105 transition-all font-sans md:font-serif absolute bottom-0 right-4 p-2">
-      <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>
-    Add to cart</Link>
 
+        <div className="">
+      <button className="rounded-lg w-56 btn-secondary hover:scale-105 transition-all font-sans md:font-serif absolute bottom-0 right-4 p-2">
+      <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>Add to cart</Link>
        </button>
       </div>
+
       </div>
       <div className="">
      <div className="modal-action">
