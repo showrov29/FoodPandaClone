@@ -1,7 +1,6 @@
 import React from 'react'
 import { useRouter } from 'next/router';
 import Image from 'next/image'
-import { Link } from 'react-scroll';
 export default function Cartview() {
   const router = useRouter();
   const title = router.query.title;

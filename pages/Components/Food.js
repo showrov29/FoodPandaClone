@@ -1,6 +1,7 @@
 import React from 'react';
-import Foodnavigation from "../components/Foodnavigation";
-import FoodDetails from '../components/FoodDetails';
+//import Foodnavigation from "../components/Foodnavigation";
+import Foodnavigation from '../Components/Foodnavigation';
+import FoodDetails from '../Components/FoodDetails';
 
 const Food = () => {
   return (
