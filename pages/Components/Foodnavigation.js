@@ -13,15 +13,16 @@ const FoodTabs = () => {
     { title: 'New' },
     { title: 'Hot ' },
   ];
+  const MOBILE_WIDTH = 768;
   const SCROLL_OFFSET = 80;
   const handleTabClick = (index) => {
-    setActiveTab(index);
-    const foodDetailsElement = document.getElementById(`foodDetails${index}`);
-    if (foodDetailsElement) {
-      const scrollY = foodDetailsElement.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
-      window.scrollTo({ top: scrollY, behavior: 'smooth' });
-    }
-  };
+        setActiveTab(index);
+        const foodDetailsElement = document.getElementById(`foodDetails${index}`);
+        if (foodDetailsElement) {
+          const scrollY = foodDetailsElement.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+          window.scrollTo({ top: scrollY, behavior: 'smooth' });
+        }
+      };
 
   const handleScroll = () => {
     if (tabsContainerRef.current) {
@@ -37,6 +38,19 @@ const FoodTabs = () => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= MOBILE_WIDTH) {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
     };
   }, []);
 
