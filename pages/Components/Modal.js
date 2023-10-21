@@ -38,7 +38,7 @@ useEffect(() => {
     {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
 
   <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
-     <div className='bg-white w-full h-100vh'> 
+     <div className='bg-white w-full h-5/6'> 
      <div className=''>
      <img src={props.src} className="w-full h-36 "/>
       </div>
@@ -105,7 +105,7 @@ useEffect(() => {
       <div className="">
      <div className="modal-action">
       <form method="dialog">
-      <button className='absolute top-14 right-0 rounded-full'>
+      <button className='absolute top-24 right-0 rounded-full'>
       <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48" className="w-8 h-8">
       <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path><path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path><path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
       </svg>
