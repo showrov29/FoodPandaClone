@@ -1,6 +1,6 @@
 import { useState, useRef, useEffect } from 'react';
 
-const FoodTabs = () => {
+const FoodTabs = ({ modalOpen }) => {
   const [activeTab, setActiveTab] = useState(0);
   const [isSticky, setIsSticky] = useState(false);
   const tabsContainerRef = useRef(null);
@@ -15,43 +15,36 @@ const FoodTabs = () => {
   ];
   const MOBILE_WIDTH = 375;
   const SCROLL_OFFSET = 80;
-  const handleTabClick = (index) => {
-        setActiveTab(index);
-        const foodDetailsElement = document.getElementById(`foodDetails${index}`);
-        if (foodDetailsElement) {
-          const scrollY = foodDetailsElement.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
-          window.scrollTo({ top: scrollY, behavior: 'smooth' });
-        }
-      };
 
-  // const handleScroll = () => {
-  //   if (tabsContainerRef.current) {
-  //     if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
-  //       setIsSticky(true);
-  //     } else {
-  //       setIsSticky(false);
-  //     }
-  //   }
-  // };
+  const handleTabClick = (index) => {
+    setActiveTab(index);
+    const foodDetailsElement = document.getElementById(`foodDetails${index}`);
+    if (foodDetailsElement) {
+      const scrollY = foodDetailsElement.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+      window.scrollTo({ top: scrollY, behavior: 'smooth' });
+    }
+  };
+
   const handleScroll = () => {
-    if (tabsContainerRef.current) {
-      if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
-        setIsSticky(true);
-        tabsContainerRef.current.style.transform = 'translate3d(0, 0, 0)';
-      } else {
-        setIsSticky(false);
-        tabsContainerRef.current.style.transform = 'none';
+    if (!modalOpen) {
+      if (tabsContainerRef.current) {
+        if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
+          setIsSticky(true);
+          tabsContainerRef.current.style.transform = 'translate3d(0, 0, 0)';
+        } else {
+          setIsSticky(false);
+          tabsContainerRef.current.style.transform = 'none';
+        }
       }
     }
   };
-  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [modalOpen]);
 
   useEffect(() => {
     const handleResize = () => {
@@ -75,7 +68,7 @@ const FoodTabs = () => {
             className={`py-2 px-4 ${activeTab === index ? ' rounded-lg text-pink-500' : 'text-black'}`}
             onClick={() => handleTabClick(index)}
           >
-          {tab.title}
+            {tab.title}
           </button>
         ))}
       </div>

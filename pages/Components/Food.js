@@ -21,6 +21,24 @@ const Food = () => {
           description="Tasty dishes from Category 2."
           price={299}
         />
+        <FoodDetails
+          src="/img/f1.jpeg"
+          title="Chicken"
+          description="Tasty dishes from Category 2."
+          price={299}
+        />
+        <FoodDetails
+          src="/img/f1.jpeg"
+          title="Chicken"
+          description="Tasty dishes from Category 2."
+          price={299}
+        />
+        <FoodDetails
+          src="/img/f1.jpeg"
+          title="Chicken"
+          description="Tasty dishes from Category 2."
+          price={299}
+        />
     </div>
         <div id="foodDetails1">
         <FoodDetails

@@ -7,12 +7,12 @@ export default function FoodDetails(props) {
   return (
     <div>
       {props.category && (
-        <h2 className="pl-4 text-xl font-bold py-2 shadow-top-lg">{props.category}</h2>
+        <h2 className="pl-4 text-xl font-bold pt-8 shadow-top-lg">{props.category}</h2>
       )}
-      <div className="bg-white p-3 rounded-lg flex relative">
-        <div className="w-3/4 pr-4">
+      <div className="bg-white p-4 rounded-lg flex relative">
+        <div className="w-3/4 pr-4 ">
           <h2 className="text-md font-semibold">{props.title}</h2>
-          <p className="text-gray-600">{props.description}</p>
+          <p className="text-gray-600 text-sm font-thin">{props.description}</p>
           <p className="text-gray-600 pt-2">Tk {props.price}</p>
         </div>
         <div className="w-1/4 relative">
@@ -23,7 +23,7 @@ export default function FoodDetails(props) {
               className="w-28 h-24 rounded-lg"
             />
             <button
-              className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full p-1 z-10"
+              className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
               onClick={() => {
                 setFlag(true);
                 document && document.getElementById('my_modal_5')?.showModal();
