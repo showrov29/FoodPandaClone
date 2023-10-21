@@ -41,7 +41,7 @@ const FoodTabs = () => {
   }, []);
 
   return (
-    <div className={`w-full z-20  ${isSticky ? 'sticky top-0 shadow-lg bg-white' : 'relative'}`}>
+    <div className={`w-full z-20  ${isSticky ? 'sticky top-0 shadow-lg bg-white' : 'relative z-50'}`}>
       <div className="flex space-x-4 overflow-x-scroll py-4" ref={tabsContainerRef}>
         {tabData.map((tab, index) => (
           <button
