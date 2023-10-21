@@ -13,7 +13,7 @@ const FoodTabs = () => {
     { title: 'New' },
     { title: 'Hot ' },
   ];
-  const MOBILE_WIDTH = 768;
+  const MOBILE_WIDTH = 375;
   const SCROLL_OFFSET = 80;
   const handleTabClick = (index) => {
         setActiveTab(index);
