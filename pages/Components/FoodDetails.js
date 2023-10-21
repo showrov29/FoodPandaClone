@@ -20,7 +20,7 @@ export default function FoodDetails(props) {
             <img
               src={props.src}
               alt={props.title}
-              className="w-28 h-24 rounded-lg"
+              className="w-28 h-20 rounded-lg"
             />
             <button
               className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
