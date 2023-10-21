@@ -20,7 +20,6 @@ export default function Recommended({ selectedPrices, addSelectedPrice, removeSe
         addSelectedPrice(price);
       }
     } else {
-      // If selectedPrices is not an array, initialize it with the selected price.
       addSelectedPrice(price);
     }
   };

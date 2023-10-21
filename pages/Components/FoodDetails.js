@@ -1,33 +1,50 @@
-import React, { useState,useEffect } from 'react'
-import Image from 'next/image'
-import Modal from './Modal'
-export default function FoodDetails (props) {
-  const [flag,setFlag]=useState(false)
+import React, { useState } from 'react';
+import Modal from './Modal';
+
+export default function FoodDetails(props) {
+  const [flag, setFlag] = useState(false);
 
   return (
-    <> 
-<div className="p-2">
-<h1 className='p-2 text-bold text-xl'>{props.category}</h1>
-<div className='rounded-lg border-2 flex flex-row justify-between h-20 w-auto items-center px-4  hover:scale-105 transition-all duration-100  hover:bg-pink-100 relative z-10' >
-<div className='flex flex-col'>
-    <h3 className='text-sm font-bold overflow-hidden '>{props.title}</h3>
-    <p className='truncate text-sm text-opacity-50 max-w-xs pr-2'>{props.description}</p>
-    <h4 className='text-xs font-semibold pt-2'>{props.price} tk</h4>
-</div>
-<div>
-    <Image src={props.src} className='rounded-lg'  height={100} width={100}/>
-  <button className='absolute bottom-1 right-3 bg-pink-500 text-white rounded-full' onClick={()=>{setFlag(true);  document && document.getElementById('my_modal_5')?.showModal()}}>
-  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" className="w-6 h-6">
-  <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-</svg>
-  </button>
-  </div>
-</div>
-</div>
-<div>
-{ flag && <Modal src={props.src} title={props.title} description={props.description} price={props.price}/>}
-</div>
-    </>
-  )
+    <div>
+      {props.category && (
+        <h2 className="pl-4 text-xl font-bold py-2 shadow-top-lg">{props.category}</h2>
+      )}
+      <div className="bg-white p-4 rounded-lg flex relative">
+        <div className="w-3/4 pr-4">
+          <h2 className="text-md font-semibold">{props.title}</h2>
+          <p className="text-gray-600">{props.description}</p>
+          <p className="text-gray-600">Tk {props.price}</p>
+        </div>
+        <div className="w-1/4 relative">
+          <button
+            className="absolute bottom-0 right-0 bg-pink-500 rounded-full z-10"
+            onClick={() => {
+              setFlag(true);
+              document && document.getElementById('my_modal_5')?.showModal();
+            }}
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.5"
+              stroke="currentColor"
+              className="w-8 h-8 text-white rounded-2xl"
+            >
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+            </svg>
+          </button>
+          <img
+            src={props.src}
+            alt={props.title}
+            className="w-32 h-24 rounded-lg"
+          />
+        </div>
+        {flag && (
+          <Modal src={props.src} title={props.title} description={props.description} price={props.price} />
+        )}
+      </div>
+      <hr className="my-2 w-full border-t border-gray-300" />
+    </div>
+  );
 }
-

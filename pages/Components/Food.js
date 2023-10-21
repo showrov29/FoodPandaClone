@@ -6,7 +6,7 @@ const Food = () => {
   return (
     <>
     <Foodnavigation/>
-   <div>
+   <div className=''>
     <div id="foodDetails0">
     <FoodDetails
           category="Chicken Burgers"

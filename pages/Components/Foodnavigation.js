@@ -13,14 +13,16 @@ const FoodTabs = () => {
     { title: 'New' },
     { title: 'Hot ' },
   ];
-
+  const SCROLL_OFFSET = 80;
   const handleTabClick = (index) => {
     setActiveTab(index);
     const foodDetailsElement = document.getElementById(`foodDetails${index}`);
     if (foodDetailsElement) {
-      foodDetailsElement.scrollIntoView({ behavior: 'smooth' });
+      const scrollY = foodDetailsElement.getBoundingClientRect().top + window.scrollY - SCROLL_OFFSET;
+      window.scrollTo({ top: scrollY, behavior: 'smooth' });
     }
   };
+
   const handleScroll = () => {
     if (tabsContainerRef.current) {
       if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
