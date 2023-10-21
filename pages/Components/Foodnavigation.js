@@ -24,15 +24,27 @@ const FoodTabs = () => {
         }
       };
 
+  // const handleScroll = () => {
+  //   if (tabsContainerRef.current) {
+  //     if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
+  //       setIsSticky(true);
+  //     } else {
+  //       setIsSticky(false);
+  //     }
+  //   }
+  // };
   const handleScroll = () => {
     if (tabsContainerRef.current) {
       if (tabsContainerRef.current.getBoundingClientRect().top <= 0) {
         setIsSticky(true);
+        tabsContainerRef.current.style.transform = 'translate3d(0, 0, 0)';
       } else {
         setIsSticky(false);
+        tabsContainerRef.current.style.transform = 'none';
       }
     }
   };
+  
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);

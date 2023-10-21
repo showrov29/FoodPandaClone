@@ -9,11 +9,11 @@ export default function FoodDetails(props) {
       {props.category && (
         <h2 className="pl-4 text-xl font-bold py-2 shadow-top-lg">{props.category}</h2>
       )}
-      <div className="bg-white p-4 rounded-lg flex relative">
+      <div className="bg-white p-3 rounded-lg flex relative">
         <div className="w-3/4 pr-4">
           <h2 className="text-md font-semibold">{props.title}</h2>
           <p className="text-gray-600">{props.description}</p>
-          <p className="text-gray-600">Tk {props.price}</p>
+          <p className="text-gray-600 pt-2">Tk {props.price}</p>
         </div>
         <div className="w-1/4 relative">
           <div className="relative">
