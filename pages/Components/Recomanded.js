@@ -25,25 +25,27 @@ export default function Recommended({ selectedPrices, addSelectedPrice, removeSe
   };
 
   return (
-    <div className="bg-slate-100">
-      <div>
-        <h1 className="font-semibold text-lg pl-4">Frequently bought together</h1>
-        <p className="font-light text-xs pl-4">Other customers also ordered these</p>
+    <div className="px-4 my-4 text-base">
+  {products.map((product, index) => (
+    <div className="py-4 flex justify-between" key={index}>
+      <div id='cb1'>
+        <input
+          type="checkbox"
+          id={`${index}`}
+          name=""
+          value=""
+          className="w-5 h-5"
+          onChange={() => handleCheckboxChange(product.price)}
+        />
+        <label htmlFor={`${index}`} className="pl-2">
+          {product.name}
+        </label>
       </div>
-
-      <div className="px-4 my-4 text-base">
-        {products.map((product, index) => (
-          <div className="py-4 flex justify-between" key={index}>
-            <div>
-              <input type="checkbox" id="cb1" name="" value="" className="w-4 h-4" onChange={() => handleCheckboxChange(product.price)} />
-              <label htmlFor="cb1" className="pl-2">
-                {product.name}
-              </label>
-            </div>
-            <p>+Tk {product.price}</p>
-          </div>
-        ))}
-      </div>
+      <p>+Tk {product.price}</p>
     </div>
+  ))}
+</div>
+
+
   );
 }

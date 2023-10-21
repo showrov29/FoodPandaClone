@@ -70,7 +70,7 @@ export default function Cartview() {
       </div>
       </div>
       <div className='relative top-40 z-5 px-2 bg-slate-50 rounded-3xl' > 
-           <a className='btn w-full bg-pink-500' href='./Cheakout'>Review Payment and address</a>
+           <a className='btn w-full bg-pink-500 text-white' href='./Cheakout'>Review Payment and address</a>
       </div>
 </div>
     </>
