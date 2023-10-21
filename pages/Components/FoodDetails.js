@@ -16,29 +16,31 @@ export default function FoodDetails(props) {
           <p className="text-gray-600">Tk {props.price}</p>
         </div>
         <div className="w-1/4 relative">
-          <button
-            className="absolute bottom-0 right-0 bg-pink-500 rounded-full z-10"
-            onClick={() => {
-              setFlag(true);
-              document && document.getElementById('my_modal_5')?.showModal();
-            }}
-          >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              strokeWidth="1.5"
-              stroke="currentColor"
-              className="w-8 h-8 text-white rounded-2xl"
+          <div className="relative">
+            <img
+              src={props.src}
+              alt={props.title}
+              className="w-28 h-24 rounded-lg"
+            />
+            <button
+              className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full p-1 z-10"
+              onClick={() => {
+                setFlag(true);
+                document && document.getElementById('my_modal_5')?.showModal();
+              }}
             >
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
-            </svg>
-          </button>
-          <img
-            src={props.src}
-            alt={props.title}
-            className="w-32 h-24 rounded-lg"
-          />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-8 h-8 text-white rounded-2xl"
+              >
+                <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+              </svg>
+            </button>
+          </div>
         </div>
         {flag && (
           <Modal src={props.src} title={props.title} description={props.description} price={props.price} />
