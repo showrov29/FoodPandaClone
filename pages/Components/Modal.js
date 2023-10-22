@@ -78,7 +78,7 @@ useEffect(() => {
         </svg>
       </button>
     </form>
-        <div className='mt-2 shadow-top-sm'>
+  <div className='mt-2 shadow-top-sm fixed bottom-0 left-0 right-0 px-2 bg-slate-50 rounded-3xl z-5'>
   <div className="flex items-center justify-between">
     <div className="flex items-center">
       <button
