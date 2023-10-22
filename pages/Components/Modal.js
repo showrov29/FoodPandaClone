@@ -58,7 +58,7 @@ export default function Modal(props) {
         </div>
       </div>
     </div>
-    <div className='h-auto overflow-y-scroll' style={{ maxHeight: 'calc(100vh - 200px)' }}>
+    <div className='h-64 overflow-y-scroll'>
       <Recomanded
         selectedPrices={selectedPrices}
         addSelectedPrice={addSelectedPrice}
