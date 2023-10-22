@@ -58,7 +58,7 @@ export default function Modal(props) {
         </div>
       </div>
     </div>
-    <div className='h-64 overflow-y-scroll'>
+    <div className='h-screen overflow-y-scroll'>
       <Recomanded
         selectedPrices={selectedPrices}
         addSelectedPrice={addSelectedPrice}
@@ -75,7 +75,9 @@ export default function Modal(props) {
       </button>
     </form>
   </div>
-  <div className='bg-white w-full h-auto shadow-top-sm'>
+  <div className='absolute-fill-parent product-tile__animation-overlay w-full bg-white shadow-top-sm h-24 absolute bottom-0'>
+  <div className="box-flex grow respect-flex-parent-width jc-space-between ">
+  <div className=' pt-6'>
     <div className="flex items-center justify-between">
       <div className="flex items-center">
         <button
@@ -102,6 +104,8 @@ export default function Modal(props) {
         <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>Add to cart</Link>
       </button>
     </div>
+  </div>
+  </div>
   </div>
 </dialog>
 

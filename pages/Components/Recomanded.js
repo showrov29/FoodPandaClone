@@ -10,6 +10,16 @@ export default function Recommended({ selectedPrices, addSelectedPrice, removeSe
     { name: 'Chicken khichuri full', price: 240 },
     { name: 'Chicken khichuri full', price: 20 },
     { name: 'Chicken khichuri full', price: 200 },
+    { name: 'Chicken khichuri full', price: 220 },
+    { name: 'Chicken khichuri full', price: 250 },
+    { name: 'Chicken khichuri full', price: 230 },
+    { name: 'Chicken khichuri full', price: 290 },
+    { name: 'Chicken khichuri full', price: 210 },
+    { name: 'Chicken khichuri full', price: 220 },
+    { name: 'Chicken khichuri full', price: 250 },
+    { name: 'Chicken khichuri full', price: 230 },
+    { name: 'Chicken khichuri full', price: 290 },
+    { name: 'Chicken khichuri full', price: 210 },
   ];
   
   const handleCheckboxChange = (price) => {
