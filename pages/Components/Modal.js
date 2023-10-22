@@ -1,29 +1,26 @@
-import React, {useEffect, useState} from 'react'
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import Recomanded from './Recomanded';
+
 export default function Modal(props) {
-const [flag,setFlag]=useState(false)
-useEffect(() => {
-    setFlag(props.flag)
+  const [flag, setFlag] = useState(false);
 
-    if (flag){
-       document.getElementById('my_modal_5').showModal()
+  useEffect(() => {
+    setFlag(props.flag);
+    if (flag) {
+      document.getElementById('my_modal_5').showModal();
+    } else {
     }
-    else {
+  }, []);
 
-    }
-   },[])
-   
-   const [quantity, setQuantity] = useState(1);
+  const [quantity, setQuantity] = useState(1);
 
-   const addToCart = () => {
-     
-   };
-   
-    const [selectedPrices, setSelectedPrices] = useState([]);
-    const selectedPriceTotal = selectedPrices.reduce((total, price) => total + price, 0);
+  const addToCart = () => {};
 
-    const addSelectedPrice = (price) => {
+  const [selectedPrices, setSelectedPrices] = useState([]);
+  const selectedPriceTotal = selectedPrices.reduce((total, price) => total + price, 0);
+
+  const addSelectedPrice = (price) => {
     setSelectedPrices((prevSelectedPrices) => [...prevSelectedPrices, price]);
   };
 
@@ -32,44 +29,43 @@ useEffect(() => {
       prevSelectedPrices.filter((selectedPrice) => selectedPrice !== price)
     );
   };
-  const total= props.price * quantity + selectedPriceTotal;
+  const total = props.price * quantity + selectedPriceTotal;
   return (
-  <>
-    {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
+    <>
+      {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
 
-  <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle ">
-     <div className='bg-white w-full h-5/6 relative'> 
-     <div className=''>
-     <img src={props.src} className="w-full h-36 "/>
-      </div>
-          <button
-        className="product-tile__button-overlay absolute-fill-parent"
-        onClick={addToCart}
-      />
-      <div className="absolute-fill-parent product-tile__animation-overlay" />
-      <div className="box-flex grow respect-flex-parent-width jc-space-between">
-        <div className='grid grid-cols-2 shadow-md h-10 w-auto'>
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+  <div className='bg-white w-full relative'>
+    <div>
+      <img src={props.src} className="w-full h-36" />
+    </div>
+    <button
+      className="product-tile__button-overlay absolute-fill-parent"
+      onClick={addToCart}
+    />
+    <div className="absolute-fill-parent product-tile__animation-overlay" />
+    <div className="box-flex grow respect-flex-parent-width jc-space-between">
+      <div className='grid grid-cols-2 shadow-md h-10 w-auto'>
         <div>
           <h3 className="truncate product-tile__title text-lg font-semibold pl-4">
             {props.title}
           </h3>
         </div>
         <div className="box-flex product-tile__price-row ai-center fw-wrap fd-row">
-          <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold">Tk {' '}
-          {/* {props.price * quantity + selectedPriceTotal} */}
-          {total}
+          <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold">
+            Tk {total}
           </p>
         </div>
-        </div>
       </div>
-      <div className='h-64 overflow-y-scroll'>
-        <Recomanded 
+    </div>
+    <div className='h-auto overflow-y-scroll' style={{ maxHeight: 'calc(100vh - 200px)' }}>
+      <Recomanded
         selectedPrices={selectedPrices}
         addSelectedPrice={addSelectedPrice}
-        removeSelectedPrice={removeSelectedPrice}/>
-        
-        </div>
-        <form method="dialog" className="absolute top-2 right-2">
+        removeSelectedPrice={removeSelectedPrice}
+      />
+    </div>
+    <form method="dialog" className="absolute top-2 right-2">
       <button className='rounded-full p-2 bg-red-500'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
           <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
@@ -78,40 +74,38 @@ useEffect(() => {
         </svg>
       </button>
     </form>
-  <div className='mt-2 shadow-top-sm fixed bottom-0 left-0 right-0 px-2 bg-slate-50 rounded-3xl z-5'>
-  <div className="flex items-center justify-between">
-    <div className="flex items-center">
-      <button
-        className={`font-bold hover:text-xl pl-8 ${
-          quantity > 0 ? 'text-pink-500' : 'text-black'
-        }`}
-        onClick={() => setQuantity(quantity - 1)}
-        disabled={quantity === 0}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-      </button>
-
-      <div className='font-thin text-lg px-4'>{quantity}</div>
-
-      <button className='font-bold text-xl color-pink text-pink-500'
-        onClick={() => setQuantity(quantity + 1)}
-      >
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
+  </div>
+  <div className='bg-white w-full h-auto shadow-top-sm'>
+    <div className="flex items-center justify-between">
+      <div className="flex items-center">
+        <button
+          className={`font-bold hover:text-xl pl-8 ${
+            quantity > 0 ? 'text-pink-500' : 'text-black'
+          }`}
+          onClick={() => setQuantity(quantity - 1)}
+          disabled={quantity === 0}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+        <div className='font-thin text-lg px-4'>{quantity}</div>
+        <button className='font-bold text-xl color-pink text-pink-500'
+          onClick={() => setQuantity(quantity + 1)}
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v6m3-3H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
+          </svg>
+        </button>
+      </div>
+      <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
+        <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>Add to cart</Link>
       </button>
     </div>
-
-    <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
-      <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>Add to cart</Link>
-    </button>
-  </div>
-</div>
   </div>
 </dialog>
 
-  </>
+
+    </>
   )
 }
