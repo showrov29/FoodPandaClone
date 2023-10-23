@@ -5,6 +5,7 @@ export default function Cartview() {
   const router = useRouter();
   const title = router.query.title;
   const src = router.query.src;
+  const quantity = router.query.quantity;
   const totalPrice = router.query.totalPrice;
   return (
     <>
@@ -46,7 +47,7 @@ export default function Cartview() {
   <div className='pl-6'>
     <Image src={src} alt='img' height={96} width={96} className='rounded-md'/>
   </div>
-  <div className='text-left flex-grow pl-8'>{title}</div>
+  <div className='text-left font-semibold flex-grow pl-8'>{title} ({quantity}x)</div>
   <div className='text-right pr-6'>Tk {totalPrice}</div>
 </div> 
       

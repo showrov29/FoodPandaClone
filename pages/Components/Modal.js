@@ -66,9 +66,9 @@ export default function Modal(props) {
       />
     </div>
     <form method="dialog" className="absolute top-2 right-2">
-      <button className='rounded-full p-2 bg-pink-500'>
+      <button className='rounded-full p-2 bg-pink-600'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
-          <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
+          <path fill="#DA0C81" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
           <path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path>
           <path fill="#fff" d="M32.484,29.656l-2.828,2.828l-14.14-14.14l2.828-2.828L32.484,29.656z"></path>
         </svg>
@@ -101,7 +101,7 @@ export default function Modal(props) {
         </button>
       </div>
       <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
-        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&src=${props.src}`}>Add to cart</Link>
+        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&src=${props.src}&quantity=${quantity}`}>Add to cart</Link>
       </button>
     </div>
   </div>
