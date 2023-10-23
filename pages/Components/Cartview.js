@@ -4,14 +4,12 @@ import Image from 'next/image'
 export default function Cartview() {
   const router = useRouter();
   const title = router.query.title;
+  const src = router.query.src;
   const totalPrice = router.query.totalPrice;
-  
-
-  // console.log(title)
   return (
     <>
   <div className="bg-white-800 ">
-    <div className='mt-12'>
+    <div className='mt-8'>
     <div className='relative pb-2 z-20'>
       <ul className="steps w-full bg-white-500">
         <li className="step step-secondary text-xs ">Menu</li>
@@ -27,33 +25,38 @@ export default function Cartview() {
    
     <div className="bg-slate-50 w-11/12	h-1/6	ml-4">
     <div className="w-full h-1/2 ">
-    <div className="card mt-4 bg-white-800 shadow-md">
+    <div className="card mt-1 bg-white-800 shadow-xl">
     <div className="card-body">
-      <div className="grid grid-cols-2">
-    <h2 className="text-lg font-semibold">Cooking time</h2>
-    <p>ASAP (40 mins)</p>
-    <button className="text-pink-400 text-start">Change</button>
-    </div>
-  </div>
-  </div>
-  </div>
-  </div>
-      <div className="grid grid-cols-3 items-center mt-6">
+    <div class="flex flex-row">
         <div>
-        <Image src='/img/featured1.png' alt='img' height={100} width={100}/>
+          <img src="/img/Cooking.png" height="72" width="72" alt="cook" />
         </div>
-        <h3 className='text-center'>{title}</h3>
-        <p className='text-right mr-4'>Tk {totalPrice}</p>
-      </div>
+        <div>
+        <h2 class="text-lg font-semibold mt-6">Cooking time</h2>
+        <button class="text-pink-400 text-start">Change</button>
+        </div>
+          <p className='mt-6 text-right'>ASAP (40 mins)</p>
+    </div>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  <div className="flex items-center mt-6">
+  <div className='pl-6'>
+    <Image src={src} alt='img' height={96} width={96} className='rounded-md'/>
+  </div>
+  <div className='text-left flex-grow pl-8'>{title}</div>
+  <div className='text-right pr-6'>Tk {totalPrice}</div>
+</div> 
       
-      <div className='px-6 relative top-36 text-sm font-thin'>
-        
+      <div className='fixed bottom-0 left-0 right-0 px-2 rounded-3xl z-5'>
+      <div className='px-6 text-sm font-thin mb-4'>
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
         <h1 className='flex justify-end'>Tk {totalPrice}</h1>
       </div>
       </div>
-      <div className='fixed bottom-0 left-0 right-0 px-2 bg-slate-50 rounded-3xl z-5'>
           <a className='btn w-full bg-pink-500 text-white' href='./Cheakout'>Review Payment and address</a>
         </div>
 </div>

@@ -66,7 +66,7 @@ export default function Modal(props) {
       />
     </div>
     <form method="dialog" className="absolute top-2 right-2">
-      <button className='rounded-full p-2 bg-red-500'>
+      <button className='rounded-full p-2 bg-pink-500'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
           <path fill="#f44336" d="M44,24c0,11.045-8.955,20-20,20S4,35.045,4,24S12.955,4,24,4S44,12.955,44,24z"></path>
           <path fill="#fff" d="M29.656,15.516l2.828,2.828l-14.14,14.14l-2.828-2.828L29.656,15.516z"></path>
@@ -91,7 +91,7 @@ export default function Modal(props) {
             <path stroke-linecap="round" stroke-linejoin="round" d="M15 12H9m12 0a9 9 0 11-18 0 9 9 0 0118 0z" />
           </svg>
         </button>
-        <div className='font-thin text-lg px-4'>{quantity}</div>
+        <div className='font-bold text-lg px-4'>{quantity}</div>
         <button className='font-bold text-xl color-pink text-pink-500'
           onClick={() => setQuantity(quantity + 1)}
         >
@@ -101,7 +101,7 @@ export default function Modal(props) {
         </button>
       </div>
       <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
-        <Link href={`/cart?title=${props.title}&totalPrice=${total}`}>Add to cart</Link>
+        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&src=${props.src}`}>Add to cart</Link>
       </button>
     </div>
   </div>
