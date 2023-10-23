@@ -6,4 +6,6 @@
     accent-color: #EC53B0;
   }
   
-  
+  .shadow-top {
+    box-shadow: 0 -4px 6px -6px rgba(0, 0, 0, 0.1);
+  }

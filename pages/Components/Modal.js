@@ -30,6 +30,11 @@ export default function Modal(props) {
     );
   };
   const total = props.price * quantity + selectedPriceTotal;
+  const subtotal = props.price * quantity;
+
+  const [selectedProducts, setSelectedProducts] = useState([]);
+  // console.log('Selected Products:', selectedProducts);
+
   return (
     <>
       {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
@@ -63,6 +68,9 @@ export default function Modal(props) {
         selectedPrices={selectedPrices}
         addSelectedPrice={addSelectedPrice}
         removeSelectedPrice={removeSelectedPrice}
+        // selectedProducts={props.selectedProducts}
+        selectedProducts={selectedProducts}
+      setSelectedProducts={setSelectedProducts}
       />
     </div>
     <form method="dialog" className="absolute top-2 right-2">
@@ -101,7 +109,7 @@ export default function Modal(props) {
         </button>
       </div>
       <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
-        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&src=${props.src}&quantity=${quantity}`}>Add to cart</Link>
+        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
       </button>
     </div>
   </div>
