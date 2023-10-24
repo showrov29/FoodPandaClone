@@ -100,7 +100,7 @@ export default function Modal(props) {
           </svg>
         </button>
         <div className='font-bold text-lg px-4'>{quantity}</div>
-        <button className='font-bold text-xl color-pink text-pink-500'
+        <button className='font-bold text-xl color-pink text-pink-500 mr-2'
           onClick={() => setQuantity(quantity + 1)}
         >
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-8 h-8">
@@ -108,7 +108,7 @@ export default function Modal(props) {
           </svg>
         </button>
       </div>
-      <button className="rounded-lg w-48 btn-secondary hover:scale-105 transition-all mr-6 p-2 text-white font-semibold">
+      <button className="rounded-lg w-2/3 btn-secondary hover:scale-105 transition-all p-2 text-white font-semibold">
         <Link  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
       </button>
     </div>

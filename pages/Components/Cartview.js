@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image'
 export default function Cartview() {
@@ -15,6 +16,14 @@ export default function Cartview() {
   } catch (error) {
     console.error('Error parsing selectedProductsString:', error);
   }
+
+  useEffect(() => {
+    const scrollContainer = document.querySelector('.h-screen.overflow-y-scroll');
+
+    if (scrollContainer) {
+      scrollContainer.style.overflow = 'hidden';
+    }
+  }, []);
 
 // console.log('Total Price:', subtotal);
    //console.log('cart Selected Products:', selectedProducts);
@@ -54,12 +63,13 @@ export default function Cartview() {
   </div>
   </div>
   </div>
-  <div className='h-screen overflow-y-scroll'>
+  {/* <div className='h-screen overflow-y-scroll scrollbar-hide'> */}
+  <div className="h-screen overflow-y-scroll scrollbar-transparent">
   <div className="flex items-center mt-6">
   <div className='pl-6'>
     <Image src={src} alt='img' height={96} width={96} className='rounded-md'/>
   </div>
-  <div className='text-left font-semibold flex-grow pl-8'>{title} ({quantity}x)</div>
+  <div className='text-left font-semibold flex-grow pl-4'>{title} ({quantity}x)</div>
   <div className='text-right pr-6'>Tk {subtotal}</div>
 </div> 
       
@@ -70,22 +80,22 @@ export default function Cartview() {
         <div className="pl-6 py-2">
           <img src={item.image} height={96} width={96} alt={item.name} className="rounded-md" />
         </div>
-        <div className="flex-grow font-semibold pl-8">{item.name}</div>
-        <div className="flex-shrink text-right pr-6">Tk {item.price}</div>
+        <div className="text-left flex-grow font-semibold pl-4">{item.name}</div>
+        <div className="text-right pr-6">Tk {item.price}</div>
       </li>
     ))}
   </ul>
 </div>
 </div>
 
-      <div className='fixed bottom-0 left-0 right-0 px-2 bg-white shadow-top z-5'>
-      <div className='px-6 text-sm font-thin mb-4'>
+      <div className='fixed bottom-2 left-0 right-0 px-2 bg-white shadow-top z-5'>
+      <div className='px-6 text-sm font-thin mb-2'>
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
         <h1 className='flex justify-end'>Tk {totalPrice}</h1>
       </div>
       </div>
-          <a className='btn w-full bg-pink-500 text-white' href='./Cheakout'>Review Payment and address</a>
+          <a className='btn w-full bg-pink-500 text-white' href='./Cheakout'>Confirm Menu</a>
         </div>
 </div>
     </>

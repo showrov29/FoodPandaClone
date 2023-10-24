@@ -8,7 +8,7 @@ export default function Recomanded({
   setSelectedProducts,
 }) {
   const products = [
-    { image:'/img/f1.jpeg', name: 'Chicken khichuri full', price: 220 },
+    { image:'/img/f1.jpeg', name: 'Chicken', price: 220 },
     { image:'/img/featured.jpeg', name: 'Chicken khichuri full', price: 250 },
     { image:'/img/featured.jpeg', name: 'Chicken khichuri full', price: 230 },
     { image:'/img/f1.jpeg', name: 'Chicken khichuri full', price: 290 },
