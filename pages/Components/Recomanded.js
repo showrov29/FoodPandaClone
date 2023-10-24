@@ -62,7 +62,7 @@ export default function Recomanded({
               {product.name}
             </label>
           </div>
-          <p>+Tk {product.price}</p>
+          <p className='price-colour'>+Tk {product.price}</p>
         </div>
       ))}
     </div>

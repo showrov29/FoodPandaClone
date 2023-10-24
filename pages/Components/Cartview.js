@@ -70,7 +70,7 @@ export default function Cartview() {
     <Image src={src} alt='img' height={96} width={96} className='rounded-md'/>
   </div>
   <div className='text-left font-semibold flex-grow pl-4'>{title} ({quantity}x)</div>
-  <div className='text-right pr-6'>Tk {subtotal}</div>
+  <div className='text-right pr-6 price-colour'>Tk {subtotal}</div>
 </div> 
       
 <div className="flex items-center">
@@ -81,7 +81,7 @@ export default function Cartview() {
           <img src={item.image} height={96} width={96} alt={item.name} className="rounded-md" />
         </div>
         <div className="text-left flex-grow font-semibold pl-4">{item.name}</div>
-        <div className="text-right pr-6">Tk {item.price}</div>
+        <div className="text-right pr-6 price-colour">Tk {item.price}</div>
       </li>
     ))}
   </ul>
@@ -92,7 +92,7 @@ export default function Cartview() {
       <div className='px-6 text-sm font-thin mb-2'>
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
-        <h1 className='flex justify-end'>Tk {totalPrice}</h1>
+        <h1 className='flex justify-end price-colour'>Tk {totalPrice}</h1>
       </div>
       </div>
           <a className='btn w-full bg-pink-500 text-white'  href={`./Checkoutpage?totalPrice=${totalPrice}`}>Confirm Menu</a>

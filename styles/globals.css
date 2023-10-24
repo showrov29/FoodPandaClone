@@ -13,4 +13,6 @@
 ::-webkit-scrollbar-thumb {
   background-color: transparent;
 }
-
+.price-colour {
+  color: #DA0C81;
+}

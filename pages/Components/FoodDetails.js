@@ -13,7 +13,7 @@ export default function FoodDetails(props) {
         <div className="w-3/4 pr-4 ">
           <h2 className="text-md font-semibold">{props.title}</h2>
           <p className="text-black text-opacity text-sm font-thin">{props.description}</p>
-          <p className="text-gray-600 pt-2">Tk {props.price}</p>
+          <p className="text-gray-600 pt-2 price-colour">Tk {props.price}</p>
         </div>
         <div className="w-1/4 relative">
           <div className="relative">

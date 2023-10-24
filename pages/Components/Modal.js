@@ -57,7 +57,7 @@ export default function Modal(props) {
           </h3>
         </div>
         <div className="box-flex product-tile__price-row ai-center fw-wrap fd-row">
-          <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold">
+          <p className="cl-neutral-primary f-label-large-font-size fw-label-large-font-weight lh-label-large-line-height text-end pr-4 font-bold price-colour">
             Tk {total}
           </p>
         </div>
