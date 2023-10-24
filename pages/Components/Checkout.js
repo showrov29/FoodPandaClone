@@ -108,7 +108,7 @@ export default function Checkout() {
           </div>
         </div>
         <button className='w-full px-6'>
-        <a className='btn w-full bg-pink-500 text-white' href=''>Place order</a>
+        <a className='btn w-full bg-pink-500 text-white' href='./Trackpage'>Place order</a>
         </button>
       </div>
     </>

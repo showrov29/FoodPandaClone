@@ -78,7 +78,7 @@ export default function Cartview() {
     {selectedProducts.map((item, index) => (
       <li key={index} className="flex items-center">
         <div className="text-left flex-grow font-semibold pl-6 pt-4">{item.name}</div>
-        <div className="text-right pr-6 price-colour">Tk {item.price}</div>
+        <div className="text-right pr-6 price-colour pt-2">Tk {item.price}</div>
       </li>
     ))}
   </ul>
