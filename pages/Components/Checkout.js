@@ -104,10 +104,12 @@ export default function Checkout() {
         <div className='px-6 text-sm font-thin mb-2'>
           <div className='grid grid-cols-2 text-lg font-semibold'>
             <h1>Total</h1>
-            <h1 className='flex justify-end price-colour'>Tk {totalPrice}</h1>
+            <h1 className='flex justify-end price-colour mr-2'>Tk {totalPrice}</h1>
           </div>
         </div>
+        <button className='w-full px-6'>
         <a className='btn w-full bg-pink-500 text-white' href=''>Place order</a>
+        </button>
       </div>
     </>
   )

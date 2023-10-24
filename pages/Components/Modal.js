@@ -108,7 +108,7 @@ export default function Modal(props) {
           </svg>
         </button>
       </div>
-      <button className="rounded-lg w-2/3 btn-secondary p-2 text-white font-semibold relative right-2">
+      <button className="rounded-lg w-full mx-4 btn-secondary p-2 text-white font-semibold relative">
         <Link  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
       </button>
     </div>
