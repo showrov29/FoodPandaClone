@@ -88,14 +88,14 @@ export default function Cartview() {
 </div>
 </div>
 
-      <div className='fixed bottom-4 left-0 right-0 bg-white shadow-top z-5'>
+      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
       <div className='px-6 text-sm font-thin mb-2'>
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
         <h1 className='flex justify-end'>Tk {totalPrice}</h1>
       </div>
       </div>
-          <a className='btn w-full bg-pink-500 text-white' href='./Cheakout'>Confirm Menu</a>
+          <a className='btn w-full bg-pink-500 text-white'  href={`./Checkoutpage?totalPrice=${totalPrice}`}>Confirm Menu</a>
         </div>
 </div>
     </>
