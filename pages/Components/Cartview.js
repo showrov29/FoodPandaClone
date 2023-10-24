@@ -77,10 +77,7 @@ export default function Cartview() {
   <ul className="w-full">
     {selectedProducts.map((item, index) => (
       <li key={index} className="flex items-center">
-        <div className="pl-6 py-2">
-          <img src={item.image} height={96} width={96} alt={item.name} className="rounded-md" />
-        </div>
-        <div className="text-left flex-grow font-semibold pl-4">{item.name}</div>
+        <div className="text-left flex-grow font-semibold pl-6 pt-4">{item.name}</div>
         <div className="text-right pr-6 price-colour">Tk {item.price}</div>
       </li>
     ))}
