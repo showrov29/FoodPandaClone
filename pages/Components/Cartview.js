@@ -88,7 +88,7 @@ export default function Cartview() {
 </div>
 </div>
 
-      <div className='fixed bottom-2 left-0 right-0 px-2 bg-white shadow-top z-5'>
+      <div className='fixed bottom-4 left-0 right-0 bg-white shadow-top z-5'>
       <div className='px-6 text-sm font-thin mb-2'>
         <div className='grid grid-cols-2 text-lg font-semibold'>
         <h1>Total</h1>
