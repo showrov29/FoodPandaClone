@@ -16,3 +16,9 @@
 .price-colour {
   color: #DA0C81;
 }
+.section-container {
+  max-height: 100vh; /* Adjust the height as needed */
+  overflow-y: scroll;
+  scrollbar-width: thin;
+  scrollbar-color: transparent transparent;
+}

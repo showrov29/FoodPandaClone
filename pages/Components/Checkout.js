@@ -3,13 +3,24 @@ import { useRouter } from 'next/router';
 
 export default function Checkout() {
   const router = useRouter();
+  const title = router.query.title;
+  const quantity = router.query.quantity;
+  const subtotal = router.query.subtotal;
   const totalPrice = router.query.totalPrice;
+  const selectedProductsString = router.query.selectedProducts;
+  let selectedProducts = [];
+  try {
+    selectedProducts = selectedProductsString ? JSON.parse(selectedProductsString) : [];
+  } catch (error) {
+    console.error('Error parsing selectedProductsString:', error);
+  }
+
   const [selectedOption, setSelectedOption] = useState('dine-in');
 
   const handleOptionChange = (option) => {
     setSelectedOption(option);
   };
-
+console.log(totalPrice);
   return (
     <>
       <div className="bg-white-800">
@@ -108,7 +119,7 @@ export default function Checkout() {
           </div>
         </div>
         <button className='w-full px-6'>
-        <a className='btn w-full bg-pink-500 text-white' href='./Trackpage'>Place order</a>
+        <a className='btn w-full bg-pink-500 text-white' href={`./Trackpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Place order</a>
         </button>
       </div>
     </>

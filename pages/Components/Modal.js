@@ -31,7 +31,7 @@ export default function Modal(props) {
   };
   const total = props.price * quantity + selectedPriceTotal;
   const subtotal = props.price * quantity;
-
+  console.log(total);
   const [selectedProducts, setSelectedProducts] = useState([]);
   // console.log('Selected Products:', selectedProducts);
 
