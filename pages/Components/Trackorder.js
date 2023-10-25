@@ -54,7 +54,7 @@ export default function Trackorder() {
           <button className='text-pink-500 font-semibold'>Watch Cooking</button>
         </div>
     </div>
-    <section className='bg-white py-4 pl-4 pr-2 h-screen section-container'>
+    <section className='bg-white p-4 h-screen section-container'>
       <div className='bg-pink-50 p-4 rounded-lg shadow-lg'>
       <div className='flex justify-start text-xl font-extrabold '>
         <div >
