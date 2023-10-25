@@ -17,8 +17,11 @@
   color: #DA0C81;
 }
 .section-container {
-  max-height: 100vh; /* Adjust the height as needed */
+  max-height: 100vh; 
   overflow-y: scroll;
   scrollbar-width: thin;
   scrollbar-color: transparent transparent;
+}
+.overflow-y-scroll {
+  max-height: 100vh; /* This sets a maximum height of 100% of the viewport height */
 }

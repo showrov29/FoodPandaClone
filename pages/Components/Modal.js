@@ -63,7 +63,7 @@ export default function Modal(props) {
         </div>
       </div>
     </div>
-    <div className='h-screen overflow-y-scroll'>
+    <section className='h-screen overflow-y-scroll'>
       <Recomanded
         selectedPrices={selectedPrices}
         addSelectedPrice={addSelectedPrice}
@@ -72,7 +72,7 @@ export default function Modal(props) {
         selectedProducts={selectedProducts}
       setSelectedProducts={setSelectedProducts}
       />
-    </div>
+    </section>
     <form method="dialog" className="absolute top-2 right-2">
       <button className='rounded-full p-2 bg-pink-600'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 48 48">
