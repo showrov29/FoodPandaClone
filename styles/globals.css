@@ -6,13 +6,20 @@
     accent-color: #EC53B0;
   }
   
-::-webkit-scrollbar {
-  /* width: 10px;  */
+
+* {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+*::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+*::-webkit-scrollbar-thumb {
+  background: transparent;
 }
 
-::-webkit-scrollbar-thumb {
-  background-color: transparent;
-}
+
 .price-colour {
   color: #DA0C81;
 }
@@ -25,3 +32,4 @@
 .overflow-y-scroll {
   max-height: 100vh; 
 }
+

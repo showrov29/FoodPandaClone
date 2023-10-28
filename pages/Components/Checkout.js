@@ -119,7 +119,7 @@ console.log(totalPrice);
           </div>
         </div>
         <button className='w-full px-6'>
-        <a className='btn w-full bg-pink-500 text-white' href={`./Trackpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Place order</a>
+        <a className='btn w-full bg-pink-500 text-white' href={`./Trackpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedOption=${selectedOption}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Place order</a>
         </button>
       </div>
     </>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import Modal from './Modal';
+import Modal from './Modal1';
+import PopUp from './PopUp';
 
 export default function FoodDetails(props) {
   const [flag, setFlag] = useState(false);
@@ -43,6 +44,7 @@ export default function FoodDetails(props) {
           </div>
         </div>
         {flag && (
+          // <PopUp src={props.src} title={props.title} description={props.description} price={props.price} flag={flag}  selectedProducts={selectedProducts}/>
           <Modal src={props.src} title={props.title} description={props.description} price={props.price}  selectedProducts={selectedProducts} />
         )}
       </div>

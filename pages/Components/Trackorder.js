@@ -8,6 +8,7 @@ export default function Trackorder() {
   const quantity = router.query.quantity;
   const subtotal = router.query.subtotal;
   const totalPrice = router.query.totalPrice;
+  const selectedOption= router.query.selectedOption;
   const selectedProductsString = router.query.selectedProducts;
   let selectedProducts = [];
   try {
@@ -22,7 +23,9 @@ export default function Trackorder() {
       scrollContainer.style.overflow = 'hidden';
     }
   }, []);
-// console.log(selectedProducts);
+  const word = selectedOption ;
+  const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+// console.log(capitalizedWord);
   return (
     <>
     <div className='flex justify-between mt-8 px-8'>
@@ -54,9 +57,11 @@ export default function Trackorder() {
           <button className='text-pink-500 font-semibold'>Watch Cooking</button>
         </div>
     </div>
-    <section className='bg-white p-4 h-screen section-container'>
+  <section className='bg-white p-4 mb-32 '>
       <div className='bg-pink-50 p-4 rounded-lg shadow-lg'>
-      <div className='flex justify-start text-xl font-extrabold '>
+      <div tabIndex={0} className="collapse collapse-arrow">
+    <div className="collapse-title text-xl font-medium">
+     <div className='flex justify-start text-xl font-extrabold '>
         <div >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF69B4" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -64,7 +69,9 @@ export default function Trackorder() {
         </div>
         <h1 className='pl-2'>Order summary</h1>
       </div>
-           <h1 className='font-extrabold text-base pt-8'>Restaurant name</h1>
+  </div>
+  <div className="collapse-content"> 
+  <h1 className='font-extrabold text-base pt-8'>Restaurant name</h1>
         <div className='flex justify-between pt-2'>
           <h1 className=' font-medium'>Order number</h1>
           <h1 className=' font-medium text-sm'>#COVVCQ2G</h1>
@@ -85,20 +92,52 @@ export default function Trackorder() {
                 ))}
               </ul>
           </div>
+        </div>
+      </div>
       </div>  
+     <div>
+        <div className="collapse p-2 mt-4 shadow-lg bg-pink-50">
+          <input type="checkbox" /> 
+            <div className="collapse-title flex justify-start text-xl font-extrabold">
+             <div className=''>
+                <svg xmlns="http://www.w3.org/2000/svg" fill="pink" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
+                </svg>
+              </div>
+              <h1 className='pl-2'>View payment details</h1>
+
+              <div>
+                
+              </div>
+            </div>
+          <div className="collapse-content"> 
+            <p className=' font-semibold text-center text-pink-500'>{capitalizedWord}</p>
+            <div className="divider"></div>
+            <div className="flex justify-between px-8">
+            <p>Total amount</p>
+            <p>{totalPrice}</p>
+            </div>
+            <div className="flex justify-between px-8">
+            <p>Paid</p>
+            <p>{totalPrice}</p>
+            </div>
+        </div>
+      </div>
+     </div>
     </section>
+    
     {/* <button className='w-full px-6 mt-2'>
           <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
         </button> */}
       <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
             <div className='px-6 text-sm font-thin mb-2'>
                 <div className='grid grid-cols-2 text-lg font-semibold'>
-                <h1>Total</h1>
-                <h1 className='flex justify-end price-colour'>Tk {totalPrice}</h1>
-              </div>
-          </div>
+                  <h1>Total</h1>
+                  <h1 className='flex justify-end price-colour'>Tk {totalPrice}</h1>
+                </div>
+            </div>
             <button className='w-full pl-6 pr-6'>
-                <a className='btn w-full bg-pink-500 text-white'  href='/'>Confirm Menu</a>
+                <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
             </button>
         </div>
     </>

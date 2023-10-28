@@ -26,6 +26,7 @@ export default function Recomanded({
     {  name: 'Chicken khichuri full', price: 77 },
     {  name: 'Chicken khichuri full', price: 88 },
     {  name: 'Chicken khichuri full', price: 99 },
+    
   ];
   
   const handleCheckboxChange = (product) => {
@@ -46,16 +47,16 @@ export default function Recomanded({
   };
 
   return (
-    <div className="px-4 my-4 text-base">
+    <div className="px-4 my-4 text-base mb-72">
       {products.map((product, index) => (
         <div className="py-4 flex justify-between" key={index}>
-          <div id='cb1'>
+          <div>
             <input
               type="checkbox"
               id={`${index}`}
               name=""
               value=""
-              className="w-5 h-5"
+              className="w-5 h-5 checkbox checkbox-secondary"
               onChange={() => handleCheckboxChange(product)}
             />
             <label htmlFor={`${index}`} className="pl-2">
@@ -67,4 +68,4 @@ export default function Recomanded({
       ))}
     </div>
   );
-}
+} 
