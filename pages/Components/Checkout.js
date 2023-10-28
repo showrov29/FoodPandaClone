@@ -35,8 +35,9 @@ console.log(totalPrice);
               <li className="step step-secondary text-xs">Checkout</li>
             </ul>
           </div>
+          <div className='mb-44'>
           <div className="w-full h-2 relative bottom-12 z-10">
-            <div className="h-full bg-gradient-to-r bg-pink-500"></div>
+          <div className="h-full bg-gradient-to-r bg-pink-500"></div>
           </div>
           <div className="bg-slate-50 w-11/12 h-1/6 ml-4">
             <div className="w-full h-1/2">
@@ -122,6 +123,7 @@ console.log(totalPrice);
               </div>
             </div>
           </div>
+        </div>
         </div>
       </div>
       <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
