@@ -25,10 +25,11 @@ export default function Trackorder() {
       scrollContainer.style.overflow = 'hidden';
     }
   }, []);
-  const word = selectedOption1 ;
+  const word = selectedOption1;
   const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-  console.log(selectedOption1);
-  return (
+
+  // console.log(selectedOption1); 
+   return (
     <>
     <div className='flex justify-between mt-8 px-8'>
         <div>
@@ -107,22 +108,26 @@ export default function Trackorder() {
                 </svg>
               </div>
               <h1 className='pl-2'>View payment details</h1>
-
               <div>
-                
+
               </div>
             </div>
           <div className="collapse-content"> 
-            <p className=' font-semibold text-center text-pink-500'>{capitalizedWord}</p>
-            <div className="divider"></div>
-            <div className="flex justify-between px-8">
-            <p>Total amount</p>
-            <p>{totalPrice}</p>
-            </div>
-            <div className="flex justify-between px-8">
-            <p>Paid</p>
-            <p>{totalPrice}</p>
-            </div>
+          <div className='text-center text-lg font-bold text-pink-500'>{capitalizedWord}</div>
+          <div className="divider"></div>
+          {selectedOption2 === 'cash' && (
+        <div className="flex justify-between px-2">
+          <h1>Cash</h1>
+          <p>Pay on Counter</p>
+        </div>
+      )}
+
+      {selectedOption2 === 'online-payment' && (
+        <div className=" flex justify-between px-2">
+          <h1>Online Payment</h1>
+          <p>{totalPrice}</p>
+        </div>
+      )}
         </div>
       </div>
      </div>
