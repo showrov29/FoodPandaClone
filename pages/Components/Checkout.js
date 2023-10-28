@@ -15,10 +15,13 @@ export default function Checkout() {
     console.error('Error parsing selectedProductsString:', error);
   }
 
-  const [selectedOption, setSelectedOption] = useState('dine-in');
-
-  const handleOptionChange = (option) => {
-    setSelectedOption(option);
+  const [selectedOption1, setSelectedOption1] = useState('dine-in');
+  const [selectedOption2, setSelectedOption2] = useState('cash');
+  const handleOptionChange1 = (option) => {
+    setSelectedOption1(option);
+  };
+  const handleOptionChange2 = (option) => {
+    setSelectedOption2(option);
   };
 console.log(totalPrice);
   return (
@@ -37,17 +40,18 @@ console.log(totalPrice);
           </div>
           <div className="bg-slate-50 w-11/12 h-1/6 ml-4">
             <div className="w-full h-1/2">
-              <div className="card mt-1 bg-white-800 shadow-xl">
+              <div className="card mt-1 bg-white-800 shadow-sm">
                 <div className="card-body">
-                  <div id='cb1' className='flex justify-between py-4 text-2xl font-bold'>
+                  <h1>Order Type</h1>
+                  <div id='cb1' className='flex justify-between py-4 text-lg font-bold'>
                     <input
                       type="radio"
                       id="dine-in"
-                      name="paymentOption"
+                      name="orderType"
                       value="dine-in"
                       className="w-8 h-8"
-                      checked={selectedOption === 'dine-in'}
-                      onChange={() => handleOptionChange('dine-in')}
+                      checked={selectedOption1 === 'dine-in'}
+                      onChange={() => handleOptionChange1('dine-in')}
                     />
                     <label htmlFor="dine-in" className="pl-2">Dine in</label>
                     <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
@@ -57,15 +61,15 @@ console.log(totalPrice);
                       <circle cx="24" cy="20" r="4" fill="none" stroke="#EC53B0" stroke-width="2"/>
                     </svg>
                   </div>
-                  <div id='cb1' className='flex justify-between py-4 text-2xl font-bold'>
+                  <div id='cb1' className='flex justify-between py-4 text-lg font-bold'>
                     <input
                       type="radio"
                       id="takeaway"
-                      name="paymentOption"
+                      name="orderType"
                       value="takeaway"
                       className="w-8 h-8"
-                      checked={selectedOption === 'takeaway'}
-                      onChange={() => handleOptionChange('takeaway')}
+                      checked={selectedOption1 === 'takeaway'}
+                      onChange={() => handleOptionChange1('takeaway')}
                     />
                     <label htmlFor="takeaway" className="pl-2">Takeaway</label>
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="12" viewBox="0 0 24 12">
@@ -75,30 +79,39 @@ console.log(totalPrice);
                       <circle fill="#EC53B0" cx="19" cy="10" r="2"/>
                     </svg>
                   </div>
-                  <div id='cb1' className='flex justify-between py-4 text-2xl font-bold'>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="bg-slate-50 w-11/12 h-1/6 ml-4 mt-4 ">
+            <div className="w-full h-1/2">
+              <div className="card mt-1 bg-white-800 shadow-sm">
+                <div className="card-body">
+                <h1 className='text-center font-semibold'>Payment Option</h1>
+                  <div id='cb1' className='flex justify-between py-4 text-lg font-bold'>
                     <input
                       type="radio"
                       id="cash"
                       name="paymentOption"
                       value="cash"
                       className="w-8 h-8"
-                      checked={selectedOption === 'cash'}
-                      onChange={() => handleOptionChange('cash')}
+                      checked={selectedOption2 === 'cash'}
+                      onChange={() => handleOptionChange2('cash')}
                     />
                     <label htmlFor="cash" className="pl-2">Cash</label>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EC53B0" class="w-6 h-6">
                       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" />
                     </svg>
                   </div>
-                  <div id='cb1' className='flex justify-between py-4 text-2xl font-bold'>
+                  <div id='cb1' className='flex justify-between py-4 text-lg font-bold'>
                     <input
                       type="radio"
                       id="online-payment"
                       name="paymentOption"
                       value="online-payment"
                       className="w-8 h-8"
-                      checked={selectedOption === 'online-payment'}
-                      onChange={() => handleOptionChange('online-payment')}
+                      checked={selectedOption2 === 'online-payment'}
+                      onChange={() => handleOptionChange2('online-payment')}
                     />
                     <label htmlFor="online-payment" className="pl-2">Pay online</label>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#EC53B0" class="w-6 h-6">
@@ -119,7 +132,7 @@ console.log(totalPrice);
           </div>
         </div>
         <button className='w-full px-6'>
-        <a className='btn w-full bg-pink-500 text-white' href={`./Trackpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedOption=${selectedOption}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Place order</a>
+        <a className='btn w-full bg-pink-500 text-white' href={`./Trackpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedOption1=${selectedOption1}&selectedOption2=${selectedOption2}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Place order</a>
         </button>
       </div>
     </>

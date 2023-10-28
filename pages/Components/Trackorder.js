@@ -8,7 +8,9 @@ export default function Trackorder() {
   const quantity = router.query.quantity;
   const subtotal = router.query.subtotal;
   const totalPrice = router.query.totalPrice;
-  const selectedOption= router.query.selectedOption;
+  const selectedOption1= router.query.selectedOption1 || '';
+  const selectedOption2= router.query.selectedOption2 || '';
+
   const selectedProductsString = router.query.selectedProducts;
   let selectedProducts = [];
   try {
@@ -23,9 +25,9 @@ export default function Trackorder() {
       scrollContainer.style.overflow = 'hidden';
     }
   }, []);
-  const word = selectedOption ;
+  const word = selectedOption1 ;
   const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
-// console.log(capitalizedWord);
+  console.log(selectedOption1);
   return (
     <>
     <div className='flex justify-between mt-8 px-8'>
