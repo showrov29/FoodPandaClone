@@ -39,19 +39,19 @@ const Review = () => {
          
         </div>
      <div className='card w-auto bg-pink-100 shadow-sm mt-4 mx-4'>
-      <h1 className='text-center font-semibold font-xl'>Rate us</h1>
+      <h1 className='text-center font-semibold font-xl pt-4'>Rate us</h1>
       <form onSubmit={handleSubmit}>
-        <div className="rating flex justify-center pt-4">
+        <div className="rating flex justify-center pt-2">
           <input type="radio" name="rating-2" value="1" className="mask mask-star-2 bg-pink-500" checked={rating === 1} onChange={handleRatingChange} />
           <input type="radio" name="rating-2" value="2" className="mask mask-star-2 bg-pink-500" checked={rating === 2} onChange={handleRatingChange} />
           <input type="radio" name="rating-2" value="3" className="mask mask-star-2 bg-pink-500" checked={rating === 3} onChange={handleRatingChange} />
           <input type="radio" name="rating-2" value="4" className="mask mask-star-2 bg-pink-500" checked={rating === 4} onChange={handleRatingChange} />
           <input type="radio" name="rating-2" value="5" className="mask mask-star-2 bg-pink-500" checked={rating === 5} onChange={handleRatingChange} />
         </div>
-        <div className='flex justify-center pt-4'>
+        <div className='flex justify-center mx-2 pt-4'>
         <textarea value={newReview} placeholder="Write a review" onChange={(e) => setNewReview(e.target.value)} className="textarea textarea-bordered textarea-secondary textarea-md w-full max-w-xs"/>
         </div>
-        <div className='flex justify-center pt-6 pb-2 '>
+        <div className='flex justify-center pt-4 pb-4 '>
         <button className='btn btn-sm btn-secondary' type="submit">Submit</button>
         </div>
         

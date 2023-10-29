@@ -29,7 +29,7 @@ export default function Countdown() {
   return (
     <div>
       {showMessage ? (
-        <div>Just around the corner!</div>
+        <div>Few more moments!</div>
       ) : (
         <div>
           <span>

@@ -51,7 +51,7 @@ export default function Trackorder() {
         <Countdown/>
       </div>
       <div className='flex justify-center mt-4'>
-        <img src='/img/cook.png' height={200} width={200} alt='Cooking icon'/>
+        <img src='/img/cook.png' height={100} width={100} alt='Cooking icon'/>
       </div>
         <div className='flex justify-center mt-4 text-pink-500'>
           <progress className="progress progress-secondary w-56"></progress>
@@ -60,11 +60,11 @@ export default function Trackorder() {
           <button className='text-pink-500 font-semibold'>Watch Cooking</button>
         </div>
     </div>
-  <section className='bg-white p-4 mb-32 '>
+  <section className='bg-white p-4 '>
       <div className='bg-pink-50 p-4 rounded-lg shadow-lg'>
       <div tabIndex={0} className="collapse collapse-arrow">
     <div className="collapse-title text-xl font-medium">
-     <div className='flex justify-start text-xl font-extrabold '>
+     <div className='flex justify-start text-xl font-medium '>
         <div >
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#FF69B4" class="w-6 h-6">
               <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
@@ -101,7 +101,7 @@ export default function Trackorder() {
      <div>
         <div className="collapse p-2 mt-4 shadow-lg bg-pink-50">
           <input type="checkbox" /> 
-            <div className="collapse-title flex justify-start text-xl font-extrabold">
+            <div className="collapse-title flex justify-start text-xl font-medium">
              <div className=''>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="pink" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 8.25h19.5M2.25 9h19.5m-16.5 5.25h6m-6 2.25h3m-3.75 3h15a2.25 2.25 0 002.25-2.25V6.75A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25v10.5A2.25 2.25 0 004.5 19.5z" />
@@ -136,7 +136,7 @@ export default function Trackorder() {
     {/* <button className='w-full px-6 mt-2'>
           <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
         </button> */}
-      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
+      <div className='relative pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
             <div className='px-6 text-sm font-thin mb-2'>
                 <div className='grid grid-cols-2 text-lg font-semibold'>
                   <h1>Total</h1>
