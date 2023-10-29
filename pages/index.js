@@ -2,6 +2,7 @@ import Featured from "@/pages/Components/Featured";
 
 import Food from "./Components/Food";
 import PopUp from "./Components/PopUp";
+import Review from "./Components/Review";
 
 export default function Home() {
   
@@ -9,7 +10,8 @@ export default function Home() {
     <>
     <Featured/>
     <Food/>
-    <PopUp/>
+    {/* <PopUp/> */}
+    {/* <Review/> */}
     </>
    
   )

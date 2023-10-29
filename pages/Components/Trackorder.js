@@ -125,7 +125,7 @@ export default function Trackorder() {
       {selectedOption2 === 'online-payment' && (
         <div className=" flex justify-between px-2">
           <h1>Online Payment</h1>
-          <p>{totalPrice}</p>
+          <p>Paid</p>
         </div>
       )}
         </div>

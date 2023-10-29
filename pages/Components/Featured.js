@@ -26,7 +26,7 @@ export default function Featured() {
           20000+ Ratings
         </div>
         <div className="flex items-center ml-auto">
-          <a href="#" className=" mt-2 font-medium text-pink-600 dark:text-pink-500 hover:underline text-sm font-sans md:font-serif">Review</a>
+          <a href='./Components/Review' className=" mt-2 font-medium text-pink-600 dark:text-pink-500 hover:underline text-sm font-sans md:font-serif">Review</a>
         </div>
       </div>
        

@@ -52,3 +52,21 @@ export default function FoodDetails(props) {
     </div>
   );
 }
+
+
+{/* <div className="dropdown dropdown-end absolute bottom-0 right-0 ">
+              <div tabIndex={0} className="transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10">
+                 <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    strokeWidth="1.5"
+                    stroke="currentColor"
+                    className="w-8 h-8 text-white rounded-2xl">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
+                  </svg>
+              </div>
+              <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box">
+                <ProductMenuItem/>
+              </ul>
+            </div> */}
