@@ -31,7 +31,7 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-<div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}>
+{/* <div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}> */}
 
     <div className='flex justify-between mt-8 px-8' >
         <div>
@@ -134,7 +134,7 @@ export default function Trackorder() {
       </div>
      </div>
     </section>
-    </div>
+    {/* </div> */}
     {/* <button className='w-full px-6 mt-2'>
           <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
         </button> */}
