@@ -31,7 +31,9 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-    <div className='flex justify-between mt-8 px-8'>
+<div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}>
+
+    <div className='flex justify-between mt-8 px-8' >
         <div>
             <button className='text-pink-500 font-bold'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -132,11 +134,11 @@ export default function Trackorder() {
       </div>
      </div>
     </section>
-    
+    </div>
     {/* <button className='w-full px-6 mt-2'>
           <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
         </button> */}
-      <div className='absolute pb-4 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
+      <div className='relative pb-4 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
             <div className='px-6 text-sm font-thin mb-2'>
                 <div className='grid grid-cols-2 text-lg font-semibold'>
                   <h1>Total</h1>
@@ -147,6 +149,7 @@ export default function Trackorder() {
                 <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
             </button>
         </div>
+    
     </>
   )
 }
