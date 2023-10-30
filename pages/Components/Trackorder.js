@@ -28,6 +28,15 @@ export default function Trackorder() {
   const word = selectedOption1;
   const capitalizedWord = word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
 
+  const handleButtonClick1=()=> {
+  console.log('clicked')
+  router.push('../VideoPage')
+  }
+  const handleButtonClick2=()=> {
+    console.log('clicked')
+    router.push('../HelpPage')
+ }
+ const ordernumber= '#COVVCQ2G';
   // console.log(selectedOption1); 
    return (
     <>
@@ -43,7 +52,7 @@ export default function Trackorder() {
         </div>
         <div className='text-xl font-extrabold'>Your order</div>
         <div>
-            <button className='text-pink-500'>Help</button>
+            <button onClick={handleButtonClick2} className='text-pink-500'>Help</button>
         </div>
     </div>
 
@@ -59,7 +68,7 @@ export default function Trackorder() {
           <progress className="progress progress-secondary w-56"></progress>
         </div>
         <div className='flex justify-center mt-4 '>
-          <button className='text-pink-500 font-semibold'>Watch Cooking</button>
+          <butt onClick={handleButtonClick1} className='text-pink-500 font-semibold'>Watch Cooking</butt>
         </div>
     </div>
   <section className='bg-white p-4 '>
@@ -79,7 +88,7 @@ export default function Trackorder() {
   <h1 className='font-extrabold text-base pt-8'>Restaurant name</h1>
         <div className='flex justify-between pt-2'>
           <h1 className=' font-medium'>Order number</h1>
-          <h1 className=' font-medium text-sm'>#COVVCQ2G</h1>
+          <h1 className=' font-medium text-sm'>{ordernumber}</h1>
         </div>
             <div className="divider"></div>
         <div className='flex justify-between'>
@@ -101,7 +110,7 @@ export default function Trackorder() {
       </div>
       </div>  
      <div>
-        <div className="collapse p-2 mt-4 shadow-lg bg-pink-50">
+        <div className="collapse collapse-arrow p-2 mt-4 shadow-lg bg-pink-50">
           <input type="checkbox" /> 
             <div className="collapse-title flex justify-start text-xl font-medium">
              <div className=''>

@@ -117,8 +117,7 @@ export default function Cartview() {
           <a
             className="btn w-full bg-pink-500 text-white"
             href={`./Checkoutpage?totalPrice=${totalPrice}&title=${title}&subtotal=${subtotal}&quantity=${quantity}&selectedProducts=${JSON.stringify(
-              selectedProducts
-            )}`}
+              selectedProducts)}`}
           >
             Confirm Menu
           </a>

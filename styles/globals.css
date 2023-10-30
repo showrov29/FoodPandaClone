@@ -33,3 +33,57 @@
   max-height: 100vh; 
 }
 
+
+.drawer-bottom {
+  grid-auto-rows: 80% max-content; /* Set the height to 80% */
+  grid-template-areas: "drawer-content" "drawer-side";
+  justify-items: center; /* Center the content horizontally */
+}
+
+.drawer-bottom .drawer-toggle ~ .drawer-content {
+  grid-row-start: 1;
+  grid-area: drawer-content;
+  width: 100%; /* Set the width to 100% */
+}
+
+.drawer-bottom .drawer-toggle ~ .drawer-side {
+  grid-row-start: 2;
+  grid-area: drawer-side;
+  align-self: end; /* Align the side panel to the bottom */
+  width: 100%; /* Set the width to 100% */
+}
+
+.drawer-bottom .drawer-toggle ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateY(100%); /* Initially hide the side panel below */
+}
+
+.drawer-bottom .drawer-toggle:checked ~ .drawer-side > *:not(.drawer-overlay) {
+  transform: translateY(0); /* Slide the side panel up when checked */
+}
+
+.drawer-bottom {
+    display: grid;
+    grid-template-areas: "drawer-content" "drawer-side";
+    grid-template-rows: 1fr 80%; /* Set height to 80% */
+    grid-template-columns: 100%; /* Set width to 100% */
+}
+
+.drawer-content {
+    grid-area: drawer-content;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 1rem;
+    padding-bottom: 1rem;
+}
+
+.drawer-side {
+    grid-area: drawer-side;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.drawer-side .menu {
+    width: 100%;
+    height: 100%;
+}
