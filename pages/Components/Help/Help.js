@@ -15,7 +15,7 @@ const Help = () => {
 
   return (
     <>
-    <div className='bg-pink-100 h-screen'>
+    <div className='bg-white h-screen'>
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}>
       <div className='flex justify-between pt-12 px-4'>
         <div className='flex justify-start font-normal text-lg '>
@@ -37,7 +37,7 @@ const Help = () => {
         </div>
         <div className="drawer-side">
           <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-          <ul className="menu p-4 pt-12 w-auto h-1/2 bg-base-200 text-base-content ">
+          <ul className="menu p-8 pt-12 w-auto h-1/2 bg-base-200 text-base-content ">
             <form id="issue-form" onSubmit={handleIssueSubmit}>
               <textarea placeholder="Write here" className="textarea textarea-bordered textarea-md w-full max-w-xs" id="issue-text"></textarea>
               <button type="submit" className="btn btn-secondary mt-4 ml-24">Submit</button>
