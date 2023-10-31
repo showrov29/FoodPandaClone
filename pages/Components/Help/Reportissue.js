@@ -30,7 +30,7 @@ const ReportIssue = () => {
                     </svg>
                   </a>
                 </div>
-                <div className='text-xl font-extrabold pl-2'>Write issue here</div>
+                <a href='./HelpPage' className='text-xl font-extrabold pl-2'>Write issue here</a>
               </div>
 
               <form id="issue-form" onSubmit={handleIssueSubmit}>
