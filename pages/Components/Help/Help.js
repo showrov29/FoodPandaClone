@@ -10,7 +10,7 @@ const Help = () => {
     const scrollContainer = document.querySelector('.h-screen.overflow-y-scroll');
 
     if (scrollContainer) {
-      scrollContainer.style.overflow = 'hidden';
+      scrollContainer.classList.add('no-scroll');
     }
   }, []);
   

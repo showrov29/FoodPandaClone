@@ -6,6 +6,9 @@
     accent-color: #EC53B0;
   }
   
+  .no-scroll {
+    overflow: hidden;
+  }
 
 * {
   scrollbar-width: none; 
