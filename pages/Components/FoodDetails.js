@@ -8,23 +8,24 @@ export default function FoodDetails(props) {
   return (
     <div>
       {props.category && (
-        <h2 className="pl-4 text-xl font-bold pt-8 shadow-top-lg">{props.category}</h2>
+        <h2 className="pl-4 text-xl font-bold pt-8 shadow-top-sm">{props.category}</h2>
       )}
-      <div className="bg-white p-4 rounded-lg flex relative">
-        <div className="w-3/4 pr-4 ">
-          <h2 className="text-md font-semibold">{props.title}</h2>
+      <div className="bg-white p-6 rounded-lg flex relative product-card">
+        <div className="w-full pr-4">
+          <h2 className="text-md font-semibold pb-2">{props.title}</h2>
           <p className="text-black text-opacity text-sm font-thin">{props.description}</p>
           <p className="text-gray-600 pt-2 price-colour">Tk {props.price}</p>
         </div>
-        <div className="w-1/4 relative">
-          <div className="relative">
+        <div className="product-image">
+          <div className="">
             <img
               src={props.src}
               alt={props.title}
-              className="w-28 h-20 rounded-lg"
+              className="w-28 h-28 rounded-lg"
             />
             <button
-              className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
+              // className=" absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
+              className='buy-button'
               onClick={() => {
                 setFlag(true);
                 document && document.getElementById('my_modal_5')?.showModal();
@@ -48,7 +49,7 @@ export default function FoodDetails(props) {
           <Modal src={props.src} title={props.title} description={props.description} price={props.price}  selectedProducts={selectedProducts} />
         )}
       </div>
-      <hr className="my-2 w-full border-t border-gray-300" />
+      {/* <hr className="my-2 w-full border-t border-gray-300" /> */}
     </div>
   );
 }

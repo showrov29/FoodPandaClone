@@ -1,0 +1,39 @@
+/* Default styles for mobile screens */
+.flex-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Styles for mobile screens */
+  @media (max-width: 767px) {
+    .flex-items {
+      /* Mobile styles remain unchanged */
+    }
+  }
+  
+  /* Styles for PC screens */
+  @media (min-width: 768px) {
+    .flex-items {
+      justify-content: flex-start;
+    }
+  
+    .button-container {
+      display: flex;
+      align-items: center;
+    }
+  
+    .quantity-button {
+      font-size: 14px; /* Adjust the font size as needed */
+    }
+  
+    .quantity-input {
+      font-size: 18px; /* Adjust the font size as needed */
+    }
+  
+    .add-to-cart-button {
+      padding: 6px 12px; /* Adjust the padding as needed */
+      font-size: 14px; /* Adjust the font size as needed */
+    }
+  }
+  

@@ -40,9 +40,9 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-<div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}>
+<div style={{ display: 'flex', flexDirection: 'column', minHeight: '75vh' }}>
 
-    <div className='flex justify-between mt-8 px-8' >
+    <div className='flex justify-between mt-4 px-8' >
         <div>
             <button className='text-pink-500 font-bold'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
@@ -56,12 +56,12 @@ export default function Trackorder() {
         </div>
     </div>
 
-    <div className='mt-8' >
+    <div className='mt-2' >
       <div className='flex justify-center text-base'>Estimated cooking time</div>
-      <div className='flex justify-center font-extrabold text-2xl'>
+      <div className='flex justify-center font-extrabold text-xl'>
         <Countdown/>
       </div>
-      <div className='flex justify-center mt-4'>
+      <div className='flex justify-center mt-2'>
         <img src='/img/cook.png' height={100} width={100} alt='Cooking icon'/>
       </div>
         <div className='flex justify-center mt-4 text-pink-500'>
@@ -72,8 +72,9 @@ export default function Trackorder() {
         </div>
     </div>
   <section className='bg-white p-4 '>
-      <div className='bg-pink-50 p-4 rounded-lg shadow-lg'>
-      <div tabIndex={0} className="collapse collapse-arrow">
+      <div className='bg-pink-50 p-4 rounded-lg shadow-lg'>   
+      <div className="collapse bg-pink-50 collapse-arrow">
+      <input type="checkbox" /> 
     <div className="collapse-title text-xl font-medium">
      <div className='flex justify-start text-xl font-medium '>
         <div >

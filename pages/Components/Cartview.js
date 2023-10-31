@@ -53,9 +53,9 @@ export default function Cartview() {
         </div>
       </div>
 
-      <div className="bg-slate-50 w-11/12 h-1/6 ml-4">
+      <div className="bg-white-50 w-full h-1/6">
         <div className="w-full h-1/2">
-          <div className="card mt-1 bg-white-800 shadow-xl">
+          <div className="card mt-1 bg-white-800 shadow-md mx-4">
             <div className="card-body">
               <div class="flex flex-row">
                 <div>

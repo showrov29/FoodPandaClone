@@ -28,7 +28,7 @@ export default function Modal(props) {
     setSelectedPrices((prevSelectedPrices) =>
       prevSelectedPrices.filter((selectedPrice) => selectedPrice !== price)
     );
-  };
+  }; 
   const total = props.price * quantity + selectedPriceTotal;
   const subtotal = props.price * quantity;
   console.log(total);
@@ -108,8 +108,8 @@ export default function Modal(props) {
           </svg>
         </button>
       </div>
-      <button className="rounded-lg w-full mx-4 btn-secondary p-2 text-white font-semibold relative">
-        <Link  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
+      <button className="w-full pl-2 pr-6">
+        <Link className='btn w-full bg-pink-500 text-white'  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
       </button>
     </div>
   </div>
