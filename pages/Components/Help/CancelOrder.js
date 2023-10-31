@@ -18,7 +18,7 @@ const CancelOrder = () => {
              <dialog id="my_modal_2" className="modal">
             <div className="modal-box">
               <h3 className="font-bold text-lg">Dear Customer</h3>
-              <p className="pt-4 text-lg font-semibold">Your order was canceled</p>
+              <p className="pt-4 text-lg font-semibold">Your order is canceled</p>
               <p className="">Order-number: #COVVCQ2G</p>
             </div>
             <form method="dialog" className="modal-backdrop">

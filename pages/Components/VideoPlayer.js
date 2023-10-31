@@ -7,17 +7,17 @@ const VideoPlayer = () => {
     }
   return (
     <>
-    <div className='flex justify-start pl-4 mt-4 py-4'>
-        <button onClick={handleButtonClick} className=''>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="4" stroke="#FF3FA4"  class="w-6 h-6">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M9 15L3 9m0 0l6-6M3 9h12a6 6 0 010 12h-3"/>
-            </svg>
-         </button>
-        <div className='pl-2 font-semibold text-xl'>Go back</div>
+    <div className='flex justify-start pl-4 mt-2 py-4'>
+    <button onClick={handleButtonClick} className='pl-4 text-pink-500'>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#EC53B0" width="28" height="28" viewBox="0 0 32 32">
+  <path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/>
+</svg>
+    </button> 
+        <button onClick={handleButtonClick}  className='pl-2 font-semibold text-xl'>Go back</button>
     </div>
     <div className='flex justify-center m-4'>
       <video controls>
-        <source src="/sample.mp4" type="video/mp4" />
+        <source src="/sample.mp4" type="video/mp4"/>
         Your browser does not support the video tag.
       </video>
       </div>
