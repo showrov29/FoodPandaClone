@@ -12,8 +12,8 @@ const Help = () => {
   return (
     <>
     <div className='bg-white h-screen'>
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '70vh' }}>
-      <div className='flex justify-between pt-12 px-4'>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '65vh' }}>
+      <div className='flex justify-between pt-6 px-4'>
         <div className='flex justify-start font-normal text-lg '>
           <div className=''>
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="black" className="w-6 h-6">
@@ -86,7 +86,7 @@ const Help = () => {
             </div>
         </div>
         </div>
-        <div className='relative pb-4 bottom-0 left-0 right-0 bg-white shadow-top z-5 mt-3 pl-6 pr-6'>
+        <div className='relative pb-4 bottom-0 left-0 right-0 bg-white shadow-top z-5 mt-1 pl-6 pr-6'>
         <a href={'./Trackpage'} className='btn btn-secondary w-full text-white'>Go back</a>
         </div>
     </div>
