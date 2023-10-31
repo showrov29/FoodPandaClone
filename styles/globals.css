@@ -127,7 +127,7 @@
 
 @media (max-width: 768px) {
   .buy-button {
-    padding: 3px 3px; /* Adjust the padding for smaller screens */
+    padding: 2px 2px; /* Adjust the padding for smaller screens */
     bottom: 0px;
     right: -3px; /* Adjust the position for smaller screens */
   }

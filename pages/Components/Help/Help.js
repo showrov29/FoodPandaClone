@@ -81,7 +81,7 @@ const Help = () => {
                     <p> 3. Ut enim ad minim veniam, quis nostrud exercitation?</p>    
                </div>
             </div>
-            <div className="collapse collapse-arrow bg-pink-100" style={{ margin: "0", marginTop: "-16px" }}> 
+            <div className="collapse collapse-arrow bg-pink-100" style={{ margin: "-16px 0" }}> 
          <input type="checkbox" /> 
             <div className="collapse-title text-md font-sm">5) Refunds and Cancellations</div>
                <div className="collapse-content pl-10"> 
