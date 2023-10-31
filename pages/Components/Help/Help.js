@@ -18,7 +18,7 @@ const Help = () => {
   return (
     <>
     <div className='bg-white'>
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '70vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '75vh' }}>
       <div className='flex justify-between pt-6 px-4'>
         <div className='flex justify-start font-normal text-lg '>
           <div className=''>
