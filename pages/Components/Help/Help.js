@@ -1,18 +1,24 @@
 import React from 'react';
-import { Router } from 'react-router-dom';
+import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import CancelOrder from './CancelOrder';
 import ReportIssue from './Reportissue';
 const Help = () => {
   const router = useRouter();
   
+  useEffect(() => {
+    const scrollContainer = document.querySelector('.h-screen.overflow-y-scroll');
 
+    if (scrollContainer) {
+      scrollContainer.style.overflow = 'hidden';
+    }
+  }, []);
   
 
   return (
     <>
     <div className='bg-white h-screen'>
-    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '65vh' }}>
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '70vh' }}>
       <div className='flex justify-between pt-6 px-4'>
         <div className='flex justify-start font-normal text-lg '>
           <div className=''>
