@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react'
 import Image from 'next/image'
-import Modal from './Modal1'
+import Modal from './Modal'
 import Cartview from '../Components/Cartview'
 
 export default function Burger(props) {
