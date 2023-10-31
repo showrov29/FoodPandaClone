@@ -21,7 +21,7 @@ const ReportIssue = () => {
           </div>
           <div className="drawer-side">
             <label htmlFor="my-drawer" aria-label="close sidebar" className="drawer-overlay"></label>
-            <ul className="menu p-8 pt-12 w-auto h-1/2 bg-white text-base-content fixed">
+            <ul className="menu p-8 pt-12 w-auto h-1/2 bg-white text-base-content relative">
               <div className='flex justify-start pb-8'>
                 <div>
                   <a href='./HelpPage' className='text-pink-500 font-bold'>
