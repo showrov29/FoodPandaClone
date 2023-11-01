@@ -37,7 +37,7 @@ const ReportIssue = () => {
                 <div className="flex flex-col h-full">
                   <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg h-96 w-full flex-grow" id="issue-text"></textarea>
                   <div className="flex justify-center items-end h-full">
-                    <button type="submit" className="btn btn-secondary w-1/2 absolute bottom-8">Submit</button>
+                    <button type="submit" className="btn btn-secondary w-1/2 absolute bottom-8 white">Submit</button>
                   </div>
                 </div>
               </form>

@@ -44,11 +44,11 @@ export default function Trackorder() {
 
     <div className='flex justify-between mt-2 px-8' >
         <div>
-            <button className='text-pink-500 font-bold'>
+            <a href='/' className='text-pink-500 font-bold'>
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                 </svg>
-            </button>
+            </a>
         </div>
         <div className='text-xl font-extrabold'>Your order</div>
         <div>

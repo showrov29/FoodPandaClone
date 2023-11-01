@@ -5,7 +5,7 @@ export default function Featured() {
 
  
   return (
-    <div>
+    <div className=''>
     <div>
     <img src='/img/food1.jpeg' className="w-full h-32"/>
     </div>

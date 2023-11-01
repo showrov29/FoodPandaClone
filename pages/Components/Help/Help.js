@@ -2,7 +2,7 @@ import React from 'react';
 import { useEffect } from 'react';
 import { useRouter } from 'next/router';
 import CancelOrder from './CancelOrder';
-import ReportIssue from './Reportissue';
+import ReportIssue1 from './Reportissue1';
 const Help = () => {
   const router = useRouter();
   
@@ -29,7 +29,7 @@ const Help = () => {
           <div>Help center</div>
         </div>
         <div>
-          <ReportIssue/>
+          <ReportIssue1/>
         </div>
       </div>
         <div className=''>
