@@ -34,7 +34,12 @@ export default function Modal(props) {
   console.log(total);
   const [selectedProducts, setSelectedProducts] = useState([]);
   // console.log('Selected Products:', selectedProducts);
-
+  
+  const onDelete= props.onDelete;
+  const handleDelete = () => {
+    // Implement the logic for item deletion here
+    console.log('Item deleted:', props.title);
+  };
   return (
     <>
       {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
@@ -109,7 +114,7 @@ export default function Modal(props) {
         </button>
       </div>
       <button className="w-full pl-2 pr-6">
-        <Link className='btn w-full bg-pink-500 text-white'  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
+        <Link className='btn w-full bg-pink-500 text-white'  href={`/cart?title=${props.title}&totalPrice=${total}&subtotal=${subtotal}&src=${props.src}&quantity=${quantity}&onDelete=${handleDelete}&selectedProducts=${JSON.stringify(selectedProducts)}`}>Add to cart</Link>
       </button>
     </div>
   </div>

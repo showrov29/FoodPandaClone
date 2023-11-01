@@ -4,7 +4,10 @@ import { useRouter } from 'next/router';
 
 const cart = () => {
   const router = useRouter();
-
+  const handleDelete = (data) => {
+    
+    console.log('Delete item:', data);
+  };
   const handleClick = () => {
     router.push('/');
   }
@@ -19,7 +22,7 @@ const cart = () => {
     </button>
    <h1 className='text-xl font-light flex text-black pt-2 pl-2'>Cart</h1>
     </div>
-      <Cartview/>
+      <Cartview onDelete={handleDelete} />
     </div>
     </>
   );

@@ -131,3 +131,112 @@ const Food = () => {
 };
 
 export default Food;
+
+
+// const [foodItems, setFoodItems] = useState([
+    
+//   {
+//     category:'Chicken Burgers',
+//     id: 1,
+//     src: "/img/f1.jpg",
+    
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 2,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 3,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 4,
+//     src: '/img/f1.jpg',
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     category:'Beef Burgers',
+//     id: 5,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 6,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 7,
+//     src: '/img/f1.jpg',
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 8,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     category:'Combo Burgers',
+//     id: 9,
+//     src: '/img/f1.jpg',
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 10,
+//     src: "/img/f1.jpg",
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+//   {
+//     id: 11,
+//     src: '/img/f1.jpg',
+//     title: 'Chicken',
+//     description: 'Tasty dishes from Category 1.',
+//     price: 299,
+//   },
+// ]);
+// const handleDelete = (itemId) => {
+//   // Filter out the item to be deleted based on its ID
+//   const updatedFoodItems = foodItems.filter((item) => item.id !== itemId);
+//   // Update the state with the new list of items
+//   setFoodItems(updatedFoodItems);
+// };
+// return (
+//   <>
+//   <Foodnavigation />
+//     <div className=''>
+//       {foodItems.map((foodItem) => (
+//         <div id={`foodDetails${foodItem.id}`} key={foodItem.id}>
+//           <FoodDetails
+//            category={foodItem.category}
+//             src={foodItem.src}
+//             title={foodItem.title}
+//             description={foodItem.description}
+//             price={foodItem.price}
+//             onDelete={() => handleDelete(foodItem.id)} // Pass the handleDelete function
+//           />
+//         </div>
+//       ))}
+//     </div>

@@ -5,6 +5,10 @@ import PopUp from './PopUp';
 export default function FoodDetails(props) {
   const [flag, setFlag] = useState(false);
   const [selectedProducts, setSelectedProducts] = useState([]);
+  const handleDelete = () => {
+    // Implement the logic for item deletion here
+    console.log('Item deleted:', props.title);
+  };
   return (
     <div>
       {props.category && (
@@ -46,7 +50,7 @@ export default function FoodDetails(props) {
         </div>
         {flag && (
           // <PopUp src={props.src} title={props.title} description={props.description} price={props.price} flag={flag}  selectedProducts={selectedProducts}/>
-          <Modal src={props.src} title={props.title} description={props.description} price={props.price}  selectedProducts={selectedProducts} />
+          <Modal src={props.src} title={props.title} description={props.description} price={props.price}   selectedProducts={selectedProducts} />
         )}
       </div>
       {/* <hr className="my-2 w-full border-t border-gray-300" /> */}

@@ -40,7 +40,7 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-<div style={{ display: 'flex', flexDirection: 'column', minHeight: '70vh' }}>
+<div style={{ display: 'flex', flexDirection: 'column', minHeight: '80vh' }}>
 
     <div className='flex justify-between mt-2 px-8' >
         <div>
