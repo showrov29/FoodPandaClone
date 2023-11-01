@@ -144,3 +144,20 @@ body.drawer-open {
 
 /* hello */
 
+/* CSS for the FoodTabs component */
+.tabs-container {
+  display: flex;
+  overflow-x: auto;
+  /* justify-content: center; */
+}
+
+/* Add a media query to disable sticky behavior on wider screens */
+@media (min-width: 768px) {
+  .tabs-container {
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 50;
+  }
+}
+

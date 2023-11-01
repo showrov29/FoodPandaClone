@@ -6,13 +6,14 @@ const FoodTabs = ({ modalOpen }) => {
   const tabsContainerRef = useRef(null);
 
   const tabData = [
-    { title: 'Chicken'},
-    { title: 'Beef'},
+    { title: 'Chicken' },
+    { title: 'Beef' },
     { title: 'Combo' },
-    { title: 'Special'},
+    { title: 'Special' },
     { title: 'New' },
-    { title: 'Hot ' },
+    { title: 'Hot' },
   ];
+
   const MOBILE_WIDTH = 768; // Adjust the mobile width as needed
   const SCROLL_OFFSET = 80;
 
@@ -59,16 +60,18 @@ const FoodTabs = ({ modalOpen }) => {
 
   return (
     <div className={`w-full ${isSticky ? 'sticky top-0 z-50 bg-white' : 'relative z-50'}`}>
-      <div className={`flex justify-center space-x-4 overflow-x-scroll py-4`} ref={tabsContainerRef}>
-        {tabData.map((tab, index) => (
-          <button
-            key={index}
-            className={`py-2 px-4 ${activeTab === index ? 'rounded-lg text-pink-500' : 'text-black'}`}
-            onClick={() => handleTabClick(index)}
-          >
-            {tab.title}
-          </button>
-        ))}
+      <div className="flex justify-center overflow-x-auto py-4" ref={tabsContainerRef}>
+        <div className="space-x-4 tabs-container">
+          {tabData.map((tab, index) => (
+            <button
+              key={index}
+              className={`py-2 px-4 ${activeTab === index ? 'rounded-lg text-pink-500' : 'text-black'}`}
+              onClick={() => handleTabClick(index)}
+            >
+              {tab.title}
+            </button>
+          ))}
+        </div>
       </div>
     </div>
   );
