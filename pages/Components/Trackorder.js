@@ -19,10 +19,15 @@ export default function Trackorder() {
     console.error('Error parsing selectedProductsString:', error);
   }
   useEffect(() => {
-    const scrollContainer = document.querySelector('.h-screen.overflow-y-scroll');
-
-    if (scrollContainer) {
-      scrollContainer.style.overflow = 'hidden';
+    // Calculate the content height
+    const content = document.querySelector('.content');
+    if (content) {
+      const isContentOverflowing = content.scrollHeight > content.clientHeight;
+      if (isContentOverflowing) {
+        content.style.overflowY = 'scroll'; // Enable vertical scrolling
+      } else {
+        content.style.overflowY = 'hidden'; // Disable vertical scrolling
+      }
     }
   }, []);
   const word = selectedOption1;
@@ -40,7 +45,7 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-<div style={{ display: 'flex', flexDirection: 'column', minHeight: '85vh' }}>
+<div style={{ display: 'flex', flexDirection: 'column', minHeight: '80vh' }}>
 
     <div className='flex justify-between mt-2 px-8' >
         <div>

@@ -5,12 +5,17 @@ import CancelOrder from './CancelOrder';
 import ReportIssue1 from './Reportissue1';
 const Help = () => {
   const router = useRouter();
-  
-  useEffect(() => {
-    const scrollContainer = document.querySelector('.h-screen.overflow-y-scroll');
 
-    if (scrollContainer) {
-      scrollContainer.classList.add('no-scroll');
+  useEffect(() => {
+    // Calculate the content height
+    const content = document.querySelector('.content');
+    if (content) {
+      const isContentOverflowing = content.scrollHeight > content.clientHeight;
+      if (isContentOverflowing) {
+        content.style.overflowY = 'scroll'; // Enable vertical scrolling
+      } else {
+        content.style.overflowY = 'hidden'; // Disable vertical scrolling
+      }
     }
   }, []);
   
