@@ -35,14 +35,14 @@ export default function Reportissue1() {
       <form id="issue-form" onSubmit={handleIssueSubmit}>
         <div className="flex flex-col h-full">
             <textarea placeholder="Write here" className="textarea textarea-bordered textarea-lg w-full flex-grow" id="issue-text"></textarea>
-            <div className="flex justify-center items-end h-full pt-8">
+            <div className="flex justify-center items-end h-full pt-8 modal-action">
             <button type="submit" className="btn btn-secondary w-1/2 relative bottom-0 white">Submit</button>
             </div>
         </div>
         </form>
         <div className="modal-action">
           <form method="dialog"> 
-            <button className="btn border-none absolute top-0 right-0 text-white bg-red-500 rounded-full font-extralight text-2xl">x</button>
+            <button className="btn border-none absolute top-0 right-0 text-red-500 bg-white rounded-full font-extralight text-2xl">x</button>
           </form>
         </div>
       </div>

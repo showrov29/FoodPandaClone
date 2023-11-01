@@ -1,46 +1,46 @@
-import React from 'react'
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+
 export default function Featured() {
-  
-
- 
   return (
-    <div className=''>
-    <div>
-    <img src='/img/food1.jpeg' className="w-full h-32"/>
-    </div>
+    <div className="w-full md:w-1/2 xl:w-1/3 mx-auto">
+      <div className="bg-white-400 rounded-md shadow-md">
+        <div className="relative">
+          <Image src="/img/food1.jpeg" alt="Food" layout="responsive" width={400} height={200} />
+        </div>
 
-    <div className="grid grid-cols-1 bg-pink-100 text-pink-600 px-2 py-2">
-      <p>Wellcome: 20% off up to 75 tk on orders over 299 tk (valid 2 times).</p>
-      </div>
-      <div className="bg-white-400 px-4 py-4">
-        <h1 className="font-black	 font-weight:400 font-sans md:font-serif ">Burger express mirpur</h1>
-        <div className="grid grid-cols-2"> 
-        <div className="text-black text-opacity-50 text-xs font-sans md:font-serif">Best foods</div>
-        </div>
-        <div className="flex">
-        <div className="mt-4">
-          <Image src="/img/star.png" alt="image" width="30" height="30" />
-        </div>
-        <div className="flex items-center text-black text-opacity-50 mt-4 ml-4 text-sm">
-          20000+ Ratings
-        </div>
-        <div className="flex items-center ml-auto">
-          <a href='./Components/Review' className=" mt-2 font-medium text-pink-600 dark:text-pink-500 hover:underline text-sm font-sans md:font-serif">Review</a>
-        </div>
-      </div>
-       
-      <div className="flex">
-        <div className="mt-4 text-pink-500">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
-          <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z" />
-        </svg>
-        </div>
-        <div className="flex items-center text-black text-opacity-100 mt-4 ml-4 text-sm font-sans md:font-serif">
-          Cooking time: min 40 mins.
-        </div>
-      </div>
+        <div className="p-4">
+          <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2">Burger Express Mirpur</h1>
+          <p className="text-sm text-gray-500">Best foods</p>
 
+          <div className="flex items-center mt-2">
+            <div className="flex items-center">
+              <Image src="/img/star.png" alt="Star" width={20} height={20} />
+              <span className="text-black text-opacity-50 ml-2 text-xs md:text-sm">20000+ Ratings</span>
+            </div>
+            <a href="/Components/Review" className="ml-auto font-medium text-pink-600 dark:text-pink-500 hover:underline text-xs md:text-sm">
+              Review
+            </a>
+          </div>
+
+          <div className="flex items-center mt-2">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              className="w-6 h-6 text-pink-500"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            <span className="text-black text-opacity-100 ml-2 text-xs md:text-sm">Cooking time: min 40 mins.</span>
+          </div>
+        </div>
       </div>
     </div>
   );

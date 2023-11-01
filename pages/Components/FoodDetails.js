@@ -10,26 +10,25 @@ export default function FoodDetails(props) {
     console.log('Item deleted:', props.title);
   };
   return (
-    <div>
+    <div className="w-full md:w-1/2 lg:w-1/3 mx-auto">
       {props.category && (
-        <h2 className="pl-4 text-xl font-bold pt-8 shadow-top-sm">{props.category}</h2>
+        <h2 className="text-xl font-bold pt-4 pl-4 md:pt-8 shadow-top-sm">{props.category}</h2>
       )}
-      <div className="bg-white p-6 rounded-lg flex relative product-card">
+      <div className="bg-white p-4 rounded-lg flex relative product-card">
         <div className="w-full pr-4">
-          <h2 className="text-md font-semibold pb-2">{props.title}</h2>
-          <p className="text-black text-opacity text-sm font-thin">{props.description}</p>
+          <h2 className="text-lg font-semibold pb-2">{props.title}</h2>
+          <p className="text-sm font-thin text-gray-700">{props.description}</p>
           <p className="text-gray-600 pt-2 price-colour">Tk {props.price}</p>
         </div>
         <div className="product-image">
-          <div className="">
+          <div className="relative">
             <img
               src={props.src}
               alt={props.title}
-              className="w-28 h-28 rounded-lg"
+              className="w-36 h-36 rounded-lg"
             />
             <button
-              // className=" absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
-              className='buy-button'
+              className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
               onClick={() => {
                 setFlag(true);
                 document && document.getElementById('my_modal_5')?.showModal();
@@ -41,19 +40,15 @@ export default function FoodDetails(props) {
                 viewBox="0 0 24 24"
                 strokeWidth="1.5"
                 stroke="currentColor"
-                className="w-8 h-8 text-white rounded-2xl"
+                className="w-8 h-8 text-white rounded-full"
               >
                 <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
               </svg>
             </button>
           </div>
         </div>
-        {flag && (
-          // <PopUp src={props.src} title={props.title} description={props.description} price={props.price} flag={flag}  selectedProducts={selectedProducts}/>
-          <Modal src={props.src} title={props.title} description={props.description} price={props.price}   selectedProducts={selectedProducts} />
-        )}
+        {flag && <Modal src={props.src} title={props.title} description={props.description} price={props.price} selectedProducts={selectedProducts} />}
       </div>
-      {/* <hr className="my-2 w-full border-t border-gray-300" /> */}
     </div>
   );
 }
