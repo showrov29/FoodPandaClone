@@ -47,16 +47,16 @@ export default function Recomanded({
   };
 
   return (
-    <div className="px-4 my-4 text-base mb-72">
+    <div className="px-4 my-4 text-base mb-80">
       {products.map((product, index) => (
         <div className="py-4 flex justify-between" key={index}>
-          <div>
+          <div className='flex justify-start'>
             <input
               type="checkbox"
               id={`${index}`}
               name=""
               value=""
-              className="w-5 h-5 checkbox checkbox-secondary"
+              className="w-5 h-5 pt-4 checkbox checkbox-secondary"
               onChange={() => handleCheckboxChange(product)}
             />
             <label htmlFor={`${index}`} className="pl-2">

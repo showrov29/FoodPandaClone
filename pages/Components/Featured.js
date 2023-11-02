@@ -5,9 +5,10 @@ export default function Featured() {
   return (
     <div className="w-full md:w-1/2 lg:w-3/5 mx-auto ">
       <div className="bg-white-400 rounded-md shadow-md ">
-        <div className="relative">
-          <Image src="/img/food1.jpeg" alt="Food" layout="responsive" width={400} height={200} />
-        </div>
+        {/* <div className=" flex relative ">
+        <Image src="/img/food1.jpeg" alt="Food" layout="responsive" width={400} height={200} />
+        </div> */}
+        <img src="/img/food1.jpeg" alt="Food" layout="responsive"  className='w-full h-64'/>
 
         <div className="p-4 featured-text">
           <h1 className="text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-2">Burger Express Mirpur</h1>

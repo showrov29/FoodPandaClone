@@ -103,7 +103,7 @@ body.drawer-open {
   border: 1px solid #ccc;
   border-radius: 5px;
   padding: 20px;
-  margin: 10px;
+  margin: 10px 0px;
 }
 
 .product-details {
@@ -117,8 +117,9 @@ body.drawer-open {
 
 .product-image img {
   max-width: 100%;
-  height: auto;
+  height: 100px;
 }
+
 
 .buy-button {
   position: absolute;

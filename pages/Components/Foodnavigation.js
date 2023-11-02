@@ -37,7 +37,7 @@ const FoodTabs = ({ modalOpen }) => {
       }
     }
   };
-
+  
   useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
@@ -59,7 +59,7 @@ const FoodTabs = ({ modalOpen }) => {
   }, []);
 
   return (
-    <div className={`w-full ${isSticky ? 'sticky top-0 z-50 bg-white' : 'relative z-50'}`}>
+    <div className={`w-full md:w-1/2 lg:w-3/5 mx-auto bg-white ${isSticky ? 'sticky top-0 z-50 bg-white' : 'relative z-50'}`}>
       <div className="flex justify-center overflow-x-auto py-4" ref={tabsContainerRef}>
         <div className="space-x-4 tabs-container">
           {tabData.map((tab, index) => (

@@ -22,14 +22,14 @@ export default function FoodDetails(props) {
           <p className="text-sm font-thin text-gray-700">{props.description}</p>
           <p className="text-gray-600 pt-2 price-colour">Tk {props.price}</p>
         </div>
-        <div className="product-image">
+        <div className="product-image h-28 w-28 pt-2">
           <div className="relative">
             <Image
               src={props.src}
               alt={props.title}
               layout="responsive"
-              width={400}
-              height={400}
+              width={100}
+              height={100}
               className="rounded-lg"
             />
             <button
