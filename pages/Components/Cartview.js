@@ -109,7 +109,7 @@ export default function Cartview({ onDelete }) {
                 <div className="text-right pr-6 price-colour pt-2">Tk {item.price}</div>
               </li>
             ))}
-          </ul>
+          </ul> 
         </div>
       </section>
 
