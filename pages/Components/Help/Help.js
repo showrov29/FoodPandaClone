@@ -49,7 +49,7 @@ const Help = () => {
        </div>
 
 
-      <div className='mt-4 mx-2 relative z-0'>
+      <div className='mt-4 mx-2 relative z-0 mb-20 bg-pink-100 rounded-lg'>
         <div className="collapse collapse-arrow bg-pink-100 "  style={{ margin: "-5px 0" }}> 
          <input type="checkbox" /> 
             <div className="collapse-title text-md font-sm">1) Frequently Asked Questions</div>
@@ -97,8 +97,8 @@ const Help = () => {
             </div>
         </div>
         </div>
-        <div className='relative pb-4 bottom-0 left-0 right-0 bg-white shadow-top z-5 mt-1 pl-6 pr-6'>
-        <a href={'./Trackpage'} className='btn btn-secondary w-full text-white'>Go back</a>
+        <div className='fixed pb-5 bottom-0 px-4 left-0 right-0 bg-white shadow-top z-5'>
+        <a href={'./Trackpage'} className='btn bg-pink-500 w-full text-white'>Go back</a>
         </div>
     </div>
     </>
