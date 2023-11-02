@@ -44,7 +44,7 @@ export default function Modal(props) {
     <>
       {flag && <div className="fixed inset-0 bg-black opacity-90 z-10"></div>}
 
-      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle">
+      <dialog id="my_modal_5" className="modal modal-bottom sm:modal-middle w-full md:w-1/2 lg:w-3/5 mx-auto">
   <div className='bg-white w-full relative'>
     <div>
       <img src={props.src} className="w-full h-36" />

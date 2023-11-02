@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 import Modal from './Modal1';
 import PopUp from './PopUp';
+import Image from 'next/image';
 
 export default function FoodDetails(props) {
   const [flag, setFlag] = useState(false);
   const [selectedProducts, setSelectedProducts] = useState([]);
+
   const handleDelete = () => {
-    // Implement the logic for item deletion here
     console.log('Item deleted:', props.title);
   };
+ 
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 mx-auto">
+    <div className="w-full md:w-1/2 lg:w-3/5 mx-auto"> {/* Set full width for tablets (lg:w-full) */}
       {props.category && (
         <h2 className="text-xl font-bold pt-4 pl-4 md:pt-8 shadow-top-sm">{props.category}</h2>
       )}
@@ -22,10 +24,13 @@ export default function FoodDetails(props) {
         </div>
         <div className="product-image">
           <div className="relative">
-            <img
+            <Image
               src={props.src}
               alt={props.title}
-              className="w-36 h-36 rounded-lg"
+              layout="responsive"
+              width={400}
+              height={400}
+              className="rounded-lg"
             />
             <button
               className="absolute bottom-0 right-0 transform translate-x-1/4 translate-y-1/4 bg-pink-500 rounded-full z-10"
@@ -52,6 +57,8 @@ export default function FoodDetails(props) {
     </div>
   );
 }
+
+
 
 
 {/* <div className="dropdown dropdown-end absolute bottom-0 right-0 ">

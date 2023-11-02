@@ -45,7 +45,15 @@ export default function Cartview({ onDelete }) {
     });
   };
   return (
-    <div className="bg-white-800">
+    <div className="bg-white-800 w-full md:w-1/2 lg:w-3/5 mx-auto border-t border-r border-l">
+      <div className='pl-8 relative top-4 z-4 flex flex-row-2'>
+    <a href='/' className='pt-3 text-pink-500'>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+    </svg>
+    </a>
+   <h1 className='text-xl font-light flex text-black pt-2 pl-2'>Cart</h1>
+    </div>
       <div className="mt-8">
         <div className="relative pb-2 z-20">
           <ul className="steps w-full bg-white-500">
@@ -59,7 +67,7 @@ export default function Cartview({ onDelete }) {
         </div>
       </div>
 
-      <div className="bg-white-50 w-full h-1/6">
+      <div className="bg-white-50 w-full h-1/6 ">
         <div className="w-full h-1/2">
           <div className="card mt-1 bg-white-800 shadow-md mx-4">
             <div className="card-body">
@@ -78,7 +86,7 @@ export default function Cartview({ onDelete }) {
       </div>
 
       <section className='mb-32'>
-      <div className="flex items-center mt-6">
+      <div className="flex items-center mt-6 ">
       {/* Delete button */}
       <button onClick={() => handleDelete({src, title, quantity, subtotal })} className="text-pink-500 font-semibold pl-6 pt-2">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="#DA0C81" class="w-6 h-6">
@@ -113,7 +121,7 @@ export default function Cartview({ onDelete }) {
         </div>
       </section>
 
-      <div className="fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5">
+      <div className="fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5 w-full md:w-1/2 lg:w-3/5 mx-auto border-r border-l border-t">
         <div className="px-6 text-sm font-thin mb-2">
           <div className="grid grid-cols-2 text-lg font-semibold">
             <h1>Total</h1>

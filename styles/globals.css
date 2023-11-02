@@ -161,3 +161,19 @@ body.drawer-open {
   }
 }
 
+/* global.css responsive for pc */
+/* @media (min-width: 1024) {
+  .max-w-lg,
+  .md-max-w-xl,
+  .xl-max-w-2xl {
+    max-width: 1024px;
+  }
+} */
+
+/* @media (min-width: 1024px) {
+  .max-w-lg,
+  .md-max-w-xl,
+  .xl-max-w-2xl {
+    max-width: 1024px;
+  }
+} */

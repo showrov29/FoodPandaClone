@@ -26,7 +26,15 @@ export default function Checkout() {
 console.log(totalPrice);
   return (
     <>
-      <div className="bg-white-800">
+      <div className="bg-white-800 w-full md:w-1/2 lg:w-3/5 mx-auto border-r border-l">
+      <div className='pl-2 relative top-4 z-4 flex flex-row-2'>
+    <a href='/' className=' text-pink-500'>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="#EC53B0" width="32" height="32" viewBox="0 0 32 32">
+  <path d="M32 15H3.41l8.29-8.29-1.41-1.42-10 10a1 1 0 0 0 0 1.41l10 10 1.41-1.41L3.41 17H32z" data-name="4-Arrow Left"/>
+</svg>
+    </a>
+   <h1 className='text-2xl font-semibold flex text-black pl-2'>Checkout</h1>
+    </div>
         <div className='mt-8'>
           <div className='relative pb-2 z-20'>
             <ul className="steps w-full bg-white-500">
@@ -126,7 +134,7 @@ console.log(totalPrice);
         </div>
         </div>
       </div>
-      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
+      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5 w-full md:w-1/2 lg:w-3/5 mx-auto border-r border-l'>
         <div className='px-6 text-sm font-thin mb-2'>
           <div className='grid grid-cols-2 text-lg font-semibold'>
             <h1>Total</h1>

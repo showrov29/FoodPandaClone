@@ -45,7 +45,7 @@ export default function Trackorder() {
   // console.log(selectedOption1); 
    return (
     <>
-<div style={{ display: 'flex', flexDirection: 'column', minHeight: '72vh' }}>
+<div className='w-full md:w-1/2 lg:w-3/5 mx-auto border' style={{ display: 'flex', flexDirection: 'column', minHeight: '72vh' }}>
 
     <div className='flex justify-between mt-2 px-8' >
         <div>
@@ -153,7 +153,7 @@ export default function Trackorder() {
     {/* <button className='w-full px-6 mt-2'>
           <a className='btn w-full bg-pink-500 text-white'  href='/'>Order more</a>
         </button> */}
-      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5'>
+      <div className='fixed pb-5 bottom-0 left-0 right-0 bg-white shadow-top z-5 w-full md:w-1/2 lg:w-3/5 mx-auto border'>
             <div className='px-6 text-sm font-thin mb-2'>
                 <div className='grid grid-cols-2 text-lg font-semibold'>
                   <h1>Total</h1>

@@ -28,7 +28,7 @@ const Review = () => {
     router.push('/');
   };
   return (
-    <div className="w-full md:w-1/2 lg:w-1/3 mx-auto p-4">
+    <div className="w-full md:w-1/2 lg:w-3/5 mx-auto p-4">
       <div className="navbar bg-white">
         <button onClick={handleClick} className=" text-pink-500">
           <svg xmlns="http://www.w3.org/2000/svg" fill="#EC53B0" width="26" height="26" viewBox="0 0 32 32">

@@ -22,7 +22,7 @@ const Help = () => {
 
   return (
     <>
-    <div className='bg-white'>
+    <div className='bg-white w-full md:w-1/2 lg:w-3/5 mx-auto border-r border-l'>
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '75vh' }}>
       <div className='flex justify-between pt-6 px-4'>
         <div className='flex justify-start font-normal text-lg '>
@@ -97,7 +97,7 @@ const Help = () => {
             </div>
         </div>
         </div>
-        <div className='fixed pb-5 bottom-0 px-4 left-0 right-0 bg-white shadow-top z-5'>
+        <div className='fixed pb-5 bottom-0 px-4 left-0 right-0 bg-white shadow-top z-5 w-full md:w-1/2 lg:w-3/5 mx-auto border-r border-l'>
         <a href={'./Trackpage'} className='btn bg-pink-500 w-full text-white'>Go back</a>
         </div>
     </div>
